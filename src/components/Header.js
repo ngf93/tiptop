@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import { BsCursor } from "react-icons/bs";
+import { FiNavigation } from "react-icons/fi";
 
 export default function Header() {
     return (
@@ -9,8 +9,8 @@ export default function Header() {
                 <Container className="h-100">
                     <div className='h-100 d-flex justify-content-between align-items-center'>
                         <div className='d-flex align-items-center'>
-                            <button type="button">
-                                <BsCursor/>
+                            <button type="button" className='d-flex align-items-center'>
+                                <FiNavigation/>
                                 <span className='ms-2'>Город</span>
                             </button>
                             <button type="button" className='ms-4'>Пункт</button>

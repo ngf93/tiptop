@@ -45,7 +45,16 @@ export default function Footer() {
                         </ul>
                     </Col>
                 </Row>
-                <hr/>
+                <hr className='my-5'/>
+                <div className='social'>
+                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
+                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
+                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
+                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
+                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
+                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
+                </div>
+                <div className='fs-11 mt-3'>Текст</div>
             </Container>
         </footer>
     );
