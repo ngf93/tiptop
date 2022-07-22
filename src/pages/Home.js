@@ -151,14 +151,14 @@ export default function Home() {
             </Container>
 
             <Container className='mb-6'>
-                <div className='d-flex justify-content-between mb-5'>
+                <div className='d-flex justify-content-between mb-4 mb-sm-5'>
                     <h2 className='mb-0'>Топ продаж</h2>
                     <a href='/' className='link'>
                         <span className='me-1'>Смотреть все</span>
                         <IoChevronForward/>
                     </a>
                 </div>
-                <Row xs={4} className="gx-5">
+                <Row xs={2} md={3} lg={4} className="justify-content-center gy-4 gx-3 g-sm-5 g-md-4 g-xl-5">
                     <Col>
                         <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </Col>
@@ -175,14 +175,14 @@ export default function Home() {
             </Container>
 
             <Container className='mb-6'>
-                <div className='d-flex justify-content-between mb-5'>
+                <div className='d-flex justify-content-between mb-4 mb-sm-5'>
                     <h2 className='mb-0'>Сезонные товары</h2>
                     <a href='/' className='link'>
                         <span className='me-1'>Смотреть все</span>
                         <IoChevronForward/>
                     </a>
                 </div>
-                <Row xs={4} className="gx-5">
+                <Row xs={2} md={3} lg={4} className="justify-content-center gy-4 gx-3 g-sm-5 g-md-4 g-xl-5">
                     <Col>
                         <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </Col>
@@ -199,14 +199,14 @@ export default function Home() {
             </Container>
 
             <Container className='mb-6'>
-                <div className='d-flex justify-content-between mb-5'>
+                <div className='d-flex justify-content-between mb-4 mb-sm-5'>
                     <h2 className='mb-0'>Сезонные товары</h2>
                     <a href='/' className='link'>
                         <span className='me-1'>Смотреть все</span>
                         <IoChevronForward/>
                     </a>
                 </div>
-                <Row xs={4} className="gx-5">
+                <Row xs={2} md={3} lg={4} className="justify-content-center gy-4 gx-3 g-sm-5 g-md-4 g-xl-5">
                     <Col>
                         <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </Col>
@@ -233,7 +233,7 @@ export default function Home() {
             </Container>
 
             <Container className='mb-6'>
-                <div className='d-flex justify-content-between mb-5'>
+                <div className='d-flex justify-content-between mb-4 mb-sm-5'>
                     <h2 className='mb-0'>Статьи и советы</h2>
                     <a href='/' className='link'>
                         <span className='me-1'>Смотреть все</span>
@@ -245,8 +245,22 @@ export default function Home() {
                     className='position-unset'
                         modules={[Navigation]}
                         spaceBetween={20}
-                        slidesPerView={3}
+                        slidesPerView={1}
                         navigation
+                        breakpoints={{
+                            576: {
+                                slidesPerView: 2,
+                                spaceBetween: 16,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            991: {
+                                slidesPerView: 3,
+                                spaceBetween: 20,
+                            },
+                        }}
                     >
                         <SwiperSlide>
                             <ArticlePreview title={'Плитка на кухню. Основные правила при выборе.'} subTitle={'Какую плитку выбрать на кухню?'} imgURL={"imgs/img3.png"}/>

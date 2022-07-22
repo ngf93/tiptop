@@ -11,7 +11,7 @@ export default function ArticlePreview(props) {
                     </figcaption>
                 </figure>
             </a>
-            <div className='mt-4 d-flex justify-content-between align-items-center'>
+            <div className='mt-3 mt-md-4 d-flex justify-content-between align-items-center'>
                 <h5 className='mb-0'>{props.subTitle}</h5>
                 <a href="/" className='link td-under ms-3'>Читать</a>
             </div>

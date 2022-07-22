@@ -226,7 +226,7 @@ export default function Header() {
                             </ul>
                         </div>
                         <div class="level-4">
-                            <Row xs={2} className="g-4">
+                            <Row xs={2} className="g-3 g-xl-4">
                                 <Col>
                                     <div className='brand'>
                                         <img src="imgs/img4.png" alt='Название бренда'/>
