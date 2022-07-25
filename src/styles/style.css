@@ -1377,6 +1377,60 @@ footer {
   color: #fff;
   padding: 3.5em 0;
 }
+@media (max-width: 1199px) {
+  footer {
+    height: 450px;
+  }
+}
+@media (max-width: 991px) {
+  footer {
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100;
+  }
+}
+footer ul {
+  font-size: 1.1em;
+}
+footer ul li:not(:last-child) {
+  margin-bottom: 1em;
+}
+footer ul li a {
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  transition: 0.3s;
+}
+footer ul li a:hover, footer ul li a:focus, footer ul li a:active {
+  color: #FBBA00;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+}
+footer hr {
+  background-color: #fff;
+  height: 1px !important;
+  border: none;
+  opacity: 1;
+}
+footer .social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+footer .social a:not(:first-child) {
+  margin-left: 1.25em;
+}
+footer .social img {
+  width: 3em;
+  height: 3em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 footer .mobile {
   display: none;
   height: 100%;
@@ -1411,52 +1465,4 @@ footer .mobile nav ul li a.active .stroke path {
 }
 footer .mobile nav ul li a.active .fill path, footer .mobile nav ul li a.active .fill-active path {
   fill: #FBBA00;
-}
-@media (max-width: 1199px) {
-  footer {
-    height: 450px;
-  }
-}
-@media (max-width: 991px) {
-  footer {
-    height: 50px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 0;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 100;
-  }
-}
-footer ul {
-  font-size: 1.1em;
-}
-footer ul li:not(:last-child) {
-  margin-bottom: 1em;
-}
-footer ul li a {
-  text-decoration: underline;
-  text-decoration-thickness: from-font;
-}
-footer hr {
-  background-color: #fff;
-  height: 1px !important;
-  border: none;
-  opacity: 1;
-}
-footer .social {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-footer .social a:not(:first-child) {
-  margin-left: 1.25em;
-}
-footer .social img {
-  width: 3em;
-  height: 3em;
-  -o-object-fit: contain;
-     object-fit: contain;
 }/*# sourceMappingURL=style.css.map */
