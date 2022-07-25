@@ -15,14 +15,18 @@ p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, tabl
 
 input, textarea {
   background: #ffffff;
-  box-shadow: 0px 0px 2px #000000;
-  border: none;
+  box-shadow: unset;
+  border: 1px solid #959595;
   border-radius: 4px;
   padding: 0.75em 0.85em;
   width: 100%;
   line-height: normal;
   outline: none;
   display: block;
+  transition: 0.3s;
+}
+input:hover, input:focus, textarea:hover, textarea:focus {
+  border: 1px solid #FBBA00;
 }
 
 .form-search {
@@ -79,16 +83,35 @@ button {
   font-weight: 500;
 }
 .btn-1 {
-  background: #FBBA00;
+  background-color: #FBBA00;
   color: #fff;
   font-weight: 700;
   border-radius: 10px;
+  border: none;
+  position: relative;
+  overflow: hidden;
 }
 .btn-1.color-2 {
-  background: #FF5B5B;
+  background-color: #FF5B5B;
 }
 .btn-1.color-3 {
   background-color: #E682FF;
+}
+.btn-1 > * {
+  position: relative;
+  z-index: 2;
+}
+.btn-1::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-image: linear-gradient(60deg, #FFDC77 -5%, transparent);
+  opacity: 0;
+  transition: 0.3s;
 }
 @media (max-width: 575px) {
   .btn-1 {
@@ -97,7 +120,9 @@ button {
 }
 .btn-1:hover, .btn-1:focus, .btn-1:active {
   color: #fff;
-  background: linear-gradient(256.27deg, #FBBA00 -21.79%, #FFDC77 131.37%) #FBBA00;
+}
+.btn-1:hover::after, .btn-1:focus::after, .btn-1:active::after {
+  opacity: 1;
 }
 .btn-2 {
   background: #FF5B5B;
@@ -105,6 +130,11 @@ button {
   font-weight: 700;
   border-radius: 2em;
   text-transform: uppercase;
+  transition: 0.3s;
+}
+.btn-2:hover, .btn-2:focus, .btn-2:active {
+  color: #fff;
+  background: #E682FF;
 }
 .btn:disabled {
   filter: grayscale(1);
@@ -1021,9 +1051,16 @@ main {
   align-items: center;
   font-size: 1.5em;
   color: #676767;
+  transition: 0.3s;
+}
+.product-card .count-input button:hover, .product-card .count-input button:focus {
+  color: #FBBA00;
+}
+.product-card .count-input button:active {
+  color: #FF5B5B;
 }
 .product-card .count-input input {
-  box-shadow: unset;
+  border: none;
   flex: 1;
   text-align: center;
   padding: 0px;
