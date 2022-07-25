@@ -4,6 +4,8 @@ import { useLayoutEffect } from "react";
 import Layout from '../components/Layout';
 import Home from '../pages/Home';
 import Contacts from '../pages/Contacts';
+import Catalog from '../pages/Catalog';
+import Search from '../pages/Search';
 
 export const routeList = [
     {
@@ -11,8 +13,9 @@ export const routeList = [
       element: <Layout/>,
       children: [
         {index: true, element: <Home /> , breadcrumb: 'Главная'},
-        {path: 'contacts', element: <Contacts/>, breadcrumb: 'Контакты'},
-
+        {path: 'catalog', element: <Catalog/> , breadcrumb: 'Каталог'},
+        {path: 'search', element: <Search/>, breadcrumb: 'Поиск'},
+        {path: 'catalog', element: <Catalog/> , breadcrumb: 'Каталог'},
       ],
     },
   ];

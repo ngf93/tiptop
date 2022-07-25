@@ -2,11 +2,12 @@ import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import {NavLink, Link} from 'react-router-dom';
 import { FiNavigation, FiBookmark, FiChevronRight, FiMenu } from "react-icons/fi";
 
 export default function Header() {
     const [catalogMenu, setCatalogMenu] = useState(false);
-
+    const [mobileMenu, setMobileMenu] = useState(false);
 
     const meHandler = () => {
         setCatalogMenu(true);
@@ -40,8 +41,8 @@ export default function Header() {
                 <nav>
                     <Container>
                         <ul className='list-unstyled'>
-                            <li><a href="" onMouseEnter={()=>meHandler()} onMouseLeave={()=>mlHandler()}><span>Каталог</span></a></li>
-                            <li><a href=""><span>Поиск</span></a></li>
+                            <li><NavLink to="catalog" onMouseEnter={()=>meHandler()} onMouseLeave={()=>mlHandler()}><span>Каталог</span></NavLink></li>
+                            <li><NavLink to="search"><span>Поиск</span></NavLink></li>
                             <li><a href=""><span>О нас</span></a></li>
                         </ul>
                         <a href='' className='logo'>
