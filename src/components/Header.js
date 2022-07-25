@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -15,6 +15,19 @@ export default function Header() {
     const mlHandler = () => {
         setCatalogMenu(false);
     }
+
+    const ref = useRef(null);
+    const handleClickOutside = (event) => {
+        if (ref.current && !ref.current.contains(event.target)) {
+            setMobileMenu(false);
+        }
+    };
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside, true);
+        return () => {
+            document.removeEventListener('click', handleClickOutside, true);
+        }
+    })
 
     return (
         <>
@@ -48,7 +61,7 @@ export default function Header() {
                         <a href='' className='logo'>
                             <img src="imgs/logo-top.svg" />
                         </a>
-                        <button type='button' className='menu'><FiMenu/></button>
+                        <button type='button' className='menu' onClick={()=>setMobileMenu((mobileMenu===true) ? false : true)}><FiMenu/></button>
                         <ul className='list-unstyled'>
                             <li><a href=""><span>Избранное</span></a></li>
                             <li><a href=""><span>Войти</span></a></li>
@@ -57,6 +70,79 @@ export default function Header() {
                     </Container>
                 </nav>
             </header>
+            {
+                (mobileMenu) &&
+                <div id='mobileMenu'>
+                    <Container>
+                        <section ref={ref} className='menu'>
+                            <div className='p-3 p-sm-4 fs-13 d-flex align-items-center'>
+                                <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 fw-4'>Новинки</button>
+                                <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 color-2 fw-4 ms-3 ms-sm-4'>Хиты</button>
+                                <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 color-3 fw-4 ms-3 ms-sm-4'>Распродажа</button>
+                            </div>
+                            <hr className='m-0'/>
+                            <nav className='p-3 p-sm-4'>
+                                <ul className='list-unstyled'>
+                                    <li>
+                                        <a href="/">
+                                            <span>О нас</span>
+                                            <FiChevronRight className='chevron'/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <span>Блог</span>
+                                            <FiChevronRight className='chevron'/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <span>Доставка и оплата</span>
+                                            <FiChevronRight className='chevron'/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <span>Контакты</span>
+                                            <FiChevronRight className='chevron'/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <span>Пункт</span>
+                                            <FiChevronRight className='chevron'/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <span>Пункт</span>
+                                            <FiChevronRight className='chevron'/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <span>Пункт</span>
+                                            <FiChevronRight className='chevron'/>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">
+                                            <span>Пункт</span>
+                                            <FiChevronRight className='chevron'/>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <hr className='m-0'/>
+                            <div className='p-3 p-sm-4'>
+                                <div className='fs-13 fw-5'>Помощь покупателям</div>
+                                <a href="tel:88008888888" className='btn btn-1 fs-12 w-100 mt-3 mt-sm-4 mb-2'>8 800 888 88 88</a>
+                                <div className='fw-5 fs-09 text-center'>Режим работы: с 8 до 22</div>
+                            </div>
+                        </section>
+                    </Container>
+                </div>
+            }
             {
                 (catalogMenu)&&
                 <div id="catalogMenu" onMouseEnter={()=>meHandler()}>

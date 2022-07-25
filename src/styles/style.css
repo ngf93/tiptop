@@ -84,6 +84,12 @@ button {
   font-weight: 700;
   border-radius: 10px;
 }
+.btn-1.color-2 {
+  background: #FF5B5B;
+}
+.btn-1.color-3 {
+  background-color: #E682FF;
+}
 @media (max-width: 575px) {
   .btn-1 {
     border-radius: 5px;
@@ -700,6 +706,42 @@ header nav .container .menu {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#mobileMenu {
+  position: fixed;
+  top: 140px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 767px) {
+  #mobileMenu {
+    top: 110px;
+  }
+}
+@media (max-width: 575px) {
+  #mobileMenu {
+    top: 70px;
+  }
+}
+#mobileMenu .menu {
+  background-color: #fff;
+  padding: 1em 0 0;
+  border-radius: 0 0 10px 10px;
+}
+#mobileMenu .menu ul li:not(:first-child) {
+  margin-top: 1.5em;
+}
+#mobileMenu .menu ul li a {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 main {
