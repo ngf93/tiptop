@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { IoAdd, IoRemove } from "react-icons/io5";
 
@@ -9,7 +10,7 @@ export default function ProductCard(props) {
     return (
         <div className='product-card'>
             <div className='position-relative mb-2 mb-sm-4'>
-                <img src="imgs/img2.png"/>
+                <Link to="/product"><img src="imgs/img2.png"/></Link>
                 <div className='top-left'>
                     {
                         (props.code) &&
@@ -32,7 +33,7 @@ export default function ProductCard(props) {
                     <div className='bonus'>До {props.bonus} % бонусами</div>
                 }
             </div>
-            <h5 className='fw-4 mb-1 mb-sm-2'>{props.title}</h5>
+            <h5 className='fw-4 mb-1 mb-sm-2'><Link to="/product">{props.title}</Link></h5>
             <div className='d-flex align-items-baseline mb-2 mb-md-4 mb-xxl-5'>
                 {
                     (props.discount) ?
