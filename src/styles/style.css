@@ -29,6 +29,51 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   border: 1px solid #FBBA00;
 }
 
+input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0px;
+  border-radius: 2px;
+  border: 1px solid #A6A6A6;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-image: url(imgs/mark.svg);
+  background-size: 80%;
+}
+input[type=checkbox]:checked {
+  border: 1px solid #009DE0;
+  background-color: #009DE0;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+label span {
+  flex: 1;
+}
+
+select {
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  outline: none;
+  line-height: normal;
+  background: url(imgs/chevron-down.svg) no-repeat 100% center;
+  background-size: auto;
+  padding-right: 1em;
+}
+
 .form-search {
   position: relative;
   font-size: 1.1em;
@@ -136,6 +181,16 @@ button {
   color: #fff;
   background: #E682FF;
 }
+.btn-3 {
+  border-radius: 10px;
+  border: 1px solid #959595;
+  background: transparent;
+  color: #959595;
+}
+.btn-3:hover, .btn-3:focus, .btn-3:active {
+  background: #959595;
+  color: #fff;
+}
 .btn:disabled {
   filter: grayscale(1);
   opacity: 0.75;
@@ -150,11 +205,12 @@ h1 {
   margin-bottom: 1em;
 }
 
-h2 {
+h2, h1.inner {
   text-align: left;
   font-size: 2.5em;
   font-weight: 700;
   margin-bottom: 1em;
+  text-transform: unset;
 }
 
 h3 {
@@ -330,6 +386,64 @@ h6 {
   .mb-6 {
     margin-bottom: 4em;
   }
+}
+
+.breadcrumbs {
+  margin-bottom: 2em;
+}
+.breadcrumbs ul {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  list-style: none;
+  padding-left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #676767;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.breadcrumbs ul li:not(:first-child) {
+  margin-left: 0.3em;
+}
+.breadcrumbs ul li:not(:first-child)::before {
+  content: "/";
+  margin-right: 0.3em;
+}
+
+.pagination {
+  font-size: 1.1em;
+}
+.pagination ul {
+  list-style: none;
+  padding-left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.pagination ul li:not(:first-child) {
+  margin-left: 0.5em;
+}
+.pagination ul li a, .pagination ul li button {
+  color: #959595;
+  background-color: transparent;
+  border: 1px solid #959595;
+  font-weight: 600;
+  border-radius: 10px;
+  min-width: 2.5em;
+  height: 2.5em;
+  padding: 0.5em 0.75em;
+  transition: 0.3s;
+}
+.pagination ul li a.active, .pagination ul li button.active {
+  color: #fff;
+  background-color: #FBBA00;
+  border: 1px solid #FBBA00;
+}
+.pagination ul li a svg, .pagination ul li button svg {
+  stroke-width: 3px;
 }
 
 .position-unset {
@@ -1369,6 +1483,25 @@ article.preview h5 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.filter {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 140px;
+  left: 0px;
+  width: 100%;
+}
+.filter fieldset {
+  margin-bottom: 2em;
+}
+.filter fieldset legend {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 0.75em;
+}
+.filter fieldset label {
+  margin-bottom: 0.75em;
 }
 
 footer {

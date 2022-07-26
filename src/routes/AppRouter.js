@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import Contacts from '../pages/Contacts';
 import Catalog from '../pages/Catalog';
 import Search from '../pages/Search';
+import Category from '../pages/Category';
 
 export const routeList = [
     {
@@ -15,7 +16,7 @@ export const routeList = [
         {index: true, element: <Home /> , breadcrumb: 'Главная'},
         {path: 'catalog', element: <Catalog/> , breadcrumb: 'Каталог'},
         {path: 'search', element: <Search/>, breadcrumb: 'Поиск'},
-        {path: 'catalog', element: <Catalog/> , breadcrumb: 'Каталог'},
+        {path: 'category', element: <Category/> , breadcrumb: 'Подкаталог'},
       ],
     },
   ];

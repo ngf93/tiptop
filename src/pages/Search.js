@@ -9,7 +9,7 @@ export default function Search() {
     return (
         <main>
             <Container className='mb-6'>
-                <h2 className='mb-4 mb-md-5'>Поиск</h2>
+                <h1 className='inner mb-4 mb-md-5'>Поиск</h1>
 
                 <Row className='mb-4 mb-md-5'>
                     <Col md={8} lg={6}>
