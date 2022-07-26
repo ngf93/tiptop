@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tiptop/static/css/main.0103eb7e.css",
-    "main.js": "/tiptop/static/js/main.e690533a.js",
+    "main.css": "/tiptop/static/css/main.96a01a02.css",
+    "main.js": "/tiptop/static/js/main.facb2469.js",
     "static/media/FuturaPT-DemiObl.eot": "/tiptop/static/media/FuturaPT-DemiObl.bfa63d8ea789461db8fa.eot",
     "static/media/FuturaPT-LightObl.eot": "/tiptop/static/media/FuturaPT-LightObl.3b2c0fd0bc086ca1ffff.eot",
     "static/media/FuturaPT-DemiObl.ttf": "/tiptop/static/media/FuturaPT-DemiObl.81bcbf3e6b14134bdfe5.ttf",
@@ -69,11 +69,13 @@
     "static/media/FuturaPTCond-Bold.woff": "/tiptop/static/media/FuturaPTCond-Bold.284ef35d9f5f818eefa8.woff",
     "static/media/FuturaPT-Book.woff": "/tiptop/static/media/FuturaPT-Book.4b3409651ccb2875bac1.woff",
     "index.html": "/tiptop/index.html",
-    "main.0103eb7e.css.map": "/tiptop/static/css/main.0103eb7e.css.map",
-    "main.e690533a.js.map": "/tiptop/static/js/main.e690533a.js.map"
+    "static/media/mark.svg": "/tiptop/static/media/mark.e275d0a4fbc6ed9bad68.svg",
+    "static/media/chevron-down.svg": "/tiptop/static/media/chevron-down.43a4a046a0b5f045f28e.svg",
+    "main.96a01a02.css.map": "/tiptop/static/css/main.96a01a02.css.map",
+    "main.facb2469.js.map": "/tiptop/static/js/main.facb2469.js.map"
   },
   "entrypoints": [
-    "static/css/main.0103eb7e.css",
-    "static/js/main.e690533a.js"
+    "static/css/main.96a01a02.css",
+    "static/js/main.facb2469.js"
   ]
 }
