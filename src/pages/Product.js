@@ -105,7 +105,7 @@ export default function Product() {
                                 <span className='fs-15 fw-6'>625,00 ₽</span>
                             </div>
                             <Row className='mt-4'>
-                                <Col xs={7}>
+                                <Col md={7}>
                                     <AddToCart cart={0} />
                                 </Col>
                             </Row>

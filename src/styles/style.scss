@@ -939,6 +939,7 @@ main {
 .count {
     &-input {
         @include flex-center();
+        background-color: #fff;
         border: 2px solid #C4C4C4;
         border-radius: 10px;
         padding: 0.65em 2em;
@@ -978,6 +979,21 @@ main {
 
 .product-full {
     position: relative;
+    @media (max-width: 767px){
+        .count {
+            background-color: #F2F2F2;
+            position: fixed;
+            bottom: 50px;
+            left: 0px;
+            width: 100%;
+            z-index: 100;
+            padding: 1em 3em;
+            font-size: 1.3em;
+        }
+    }
+    @media (max-width: 575px){
+        .count {padding: .5em 1em;}
+    }
     .btn-fav {
         position: absolute;
         top: 0px;
