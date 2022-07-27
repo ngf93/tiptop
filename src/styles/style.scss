@@ -272,6 +272,7 @@ h6 {
 .title-font {font-family: $title-font;}
 
 .main-color {color: $main-color;}
+.sec-color {color: $sec-color;}
 .white {color: #fff;}
 .black {color: #000;}
 .blue {color: $blue;}
@@ -519,7 +520,7 @@ header {
                             opacity: 0;
                             z-index: 0;
                         }
-                        &:hover {
+                        &:hover, &:focus, &.active {
                             &::before {opacity: 0;}
                             &::after {opacity: 1;}
                         }

@@ -8,7 +8,7 @@ export default function BtnFav(props) {
         <button type='button' className='btn-fav' onClick={()=>setFav((fav)?false:true)}>
             {
                 (fav)
-                ? <FaHeart/>
+                ? <FaHeart className='sec-color'/>
                 : <FaRegHeart/>
             }
         </button>

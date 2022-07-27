@@ -54,8 +54,8 @@ export default function Header() {
                 <nav>
                     <Container>
                         <ul className='list-unstyled'>
-                            <li><NavLink to="catalog" onMouseEnter={()=>meHandler()} onMouseLeave={()=>mlHandler()}><span>Каталог</span></NavLink></li>
-                            <li><NavLink to="search"><span>Поиск</span></NavLink></li>
+                            <li><NavLink to="/catalog" onMouseEnter={()=>meHandler()} onMouseLeave={()=>mlHandler()}><span>Каталог</span></NavLink></li>
+                            <li><NavLink to="/search"><span>Поиск</span></NavLink></li>
                             <li><a href=""><span>О нас</span></a></li>
                         </ul>
                         <a href='' className='logo'>
@@ -63,7 +63,7 @@ export default function Header() {
                         </a>
                         <button type='button' className='menu' onClick={()=>setMobileMenu((mobileMenu===true) ? false : true)}><FiMenu/></button>
                         <ul className='list-unstyled'>
-                            <li><a href=""><span>Избранное</span></a></li>
+                            <li><NavLink to="/favorites"><span>Избранное</span></NavLink></li>
                             <li><a href=""><span>Войти</span></a></li>
                             <li><a href=""><span>Корзина</span></a></li>
                         </ul>
