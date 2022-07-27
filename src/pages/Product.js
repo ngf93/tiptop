@@ -104,7 +104,7 @@ export default function Product() {
                                 <del className='gray fs-11 fw-6 me-2'>625,00</del>
                                 <span className='fs-15 fw-6'>625,00 ₽</span>
                             </div>
-                            <Row className='mt-4'>
+                            <Row className='mt-md-4'>
                                 <Col md={7}>
                                     <AddToCart cart={0} />
                                 </Col>

@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {NavLink, Link} from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { FiNavigation, FiBookmark, FiChevronRight, FiMenu } from "react-icons/fi";
 
 export default function Header() {
@@ -43,7 +43,7 @@ export default function Header() {
                                 <button type="button" className='ms-4'>Пункт</button>
                                 <button type="button" className='ms-4'>Пункт</button>
                                 <button type="button" className='ms-4'>Пункт</button>
-                                <button type="button" className='ms-4'>Пункт</button>
+                                <Link to="/contacts" className='ms-4'>Контакты</Link>
                             </div>
                             <div>
                                 <a href="tel:88000000000">8 800 000 00 00</a>
