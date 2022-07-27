@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 import ProductCard from '../components/ProductCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,11 +11,15 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { IoStarOutline, IoStar } from "react-icons/io5";
+import { IoStarOutline, IoStar, IoStarHalf } from "react-icons/io5";
+import BtnFav from '../components/utils/BtnFav';
+import AddToCart from '../components/utils/AddToCart';
+import Review from '../components/Review';
+import Pagination from '../components/Pagination';
 
 export default function Product() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [tab, setTab] = useState('1');
 
     return (
         <main>
@@ -81,7 +86,7 @@ export default function Product() {
                                 <IoStar/>
                                 <IoStar/>
                                 <IoStar/>
-                                <IoStar/>
+                                <IoStarHalf/>
                                 <IoStarOutline/>
                                 <span>132</span>
                             </div>
@@ -99,27 +104,154 @@ export default function Product() {
                                 <del className='gray fs-11 fw-6 me-2'>625,00</del>
                                 <span className='fs-15 fw-6'>625,00 ₽</span>
                             </div>
-                            <Row>
+                            <Row className='mt-4'>
                                 <Col xs={7}>
-                                    <button type='button' className='btn btn-1 fs-11 mt-4 w-100'>В корзину</button>
+                                    <AddToCart cart={0} />
                                 </Col>
                             </Row>
                         </Col>
                     </Row>
                     <h2 className='d-none d-sm-block'>О товаре</h2>
+                    
                     <div className='tabs'>
-                        <button type="button" className='active'>Описание</button>
-                        <button type="button">Харакетиристики</button>
-                        <button type="button">Отзывы 15</button>
-                    </div>
-                    <Row>
-                        <Col xl={9}>
-                            <div className='text mt-3 mt-sm-4'>
-                                <p>За 300р, конечно, не взяла бы такой. Пластик внешний не внушает доверия, но посмотрим, на сколько мужу хватит. Муж газелист, возит в машине. Внутри просто бумажная вкладка с надписью, да еще и не до конца стакана(( это расстроило больше всего. Можно раскрутить и любую картинку свою вложить и пожалуйста. Края топорно обработаны. 300мл наливается прямо до начала резбы - соответствует. Короче, не ведитесь на брендирование. Цена этому стакану рублей 100-150 максимум.</p>
+                        <button type="button" id="tab-btn-1"  className={(tab==='1') && 'active'} onClick={()=>setTab('1')}>Описание</button>
+                        {
+                            (tab === '1') &&
+                            <div className='content'>
+                                <Row>
+                                    <Col xl={9}>
+                                        <div className='text'>
+                                            <p>За 300р, конечно, не взяла бы такой. Пластик внешний не внушает доверия, но посмотрим, на сколько мужу хватит. Муж газелист, возит в машине. Внутри просто бумажная вкладка с надписью, да еще и не до конца стакана(( это расстроило больше всего. Можно раскрутить и любую картинку свою вложить и пожалуйста. Края топорно обработаны. 300мл наливается прямо до начала резбы - соответствует. Короче, не ведитесь на брендирование. Цена этому стакану рублей 100-150 максимум.</p>
+                                        </div>
+                                    </Col>
+                                </Row>
                             </div>
-                        </Col>
-                    </Row>
-                    <button type='button' className='btn-fav'><FaRegHeart/></button>
+                        }
+                        <button type="button" id="tab-btn-2" className={(tab==='2') && 'active'} onClick={()=>setTab('2')}>Харакетиристики</button>
+                        {
+                            (tab === '2') &&
+                            <div className='content'>
+                                <div className='characteristics'>
+                                    <h4 className='d-none d-md-block fs-20 fw-7 mb-4 mb-md-5'>Характеристики</h4>
+                                    <h5>Хар1</h5>
+                                    <ul className="specification list-unstyled">
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                    </ul>
+                                    <h5>Хар1</h5>
+                                    <ul className="specification list-unstyled">
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                    </ul>
+                                    <h5>Хар1</h5>
+                                    <ul className="specification list-unstyled">
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li class="line">
+                                            <div class="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        }
+                        <button type="button" id="tab-btn-3" className={(tab==='3') && 'active'} onClick={()=>setTab('3')}>Отзывы 15</button>
+                        {
+                            (tab === '3') &&
+                            <div className='content'>
+                                <Row className="flex-lg-row-reverse justify-content-between">
+                                    <Col lg={3} className="mb-4 mb-sm-5 mb-lg-0">
+                                        <button type='button' className='btn btn-1 w-100 fs-11 mb-4 mb-sm-5'><span>Оставить отзыв</span></button>
+
+                                        <div className='d-flex justify-content-between align-items-center mb-4'>
+                                            <div className='rating'>
+                                                <IoStar/>
+                                                <IoStar/>
+                                                <IoStar/>
+                                                <IoStarHalf/>
+                                                <IoStarOutline/>
+                                            </div>
+                                            <h2 className='mb-0'>3,5</h2>
+                                        </div>
+                                        <div className='rating-info mb-2'>
+                                            <div className='val'>5</div>
+                                            <ProgressBar now={100} />
+                                            <div className='percent'>100%</div>
+                                        </div>
+                                        <div className='rating-info mb-2'>
+                                            <div className='val'>4</div>
+                                            <ProgressBar now={0} />
+                                            <div className='percent'>0%</div>
+                                        </div>
+                                        <div className='rating-info mb-2'>
+                                            <div className='val'>3</div>
+                                            <ProgressBar now={60} />
+                                            <div className='percent'>60%</div>
+                                        </div>
+                                        <div className='rating-info mb-2'>
+                                            <div className='val'>2</div>
+                                            <ProgressBar now={20} />
+                                            <div className='percent'>20%</div>
+                                        </div>
+                                        <div className='rating-info'>
+                                            <div className='val'>1</div>
+                                            <ProgressBar now={5} />
+                                            <div className='percent'>5%</div>
+                                        </div>
+                                    </Col>
+                                    <Col lg={9} xxl={8}>
+                                        <p className='fs-15 fw-7 mb-4 mb-sm-5'>Отзывов о товаре ещё нет – ваш может стать первым</p>
+
+                                        <Review rating={'5'} text={'За 300р, конечно, не взяла бы такой. Пластик внешний не внушает доверия, но посмотрим, на сколько мужу хватит. Муж газелист, возит в машине. Внутри просто бумажная вкладка с надписью, да еще и не до конца стакана(( это расстроило больше всего. Можно раскрутить и любую картинку свою вложить и пожалуйста. Края топорно обработаны. 300мл наливается прямо до начала резбы - соответствует. Короче, не ведитесь на брендирование. Цена этому стакану рублей 100-150 максимум.'} author={'pochtausera@pochta.pochta'} date={'10 апреля 2022'} />
+                                        <Review rating={'4'} text={'За 300р, конечно, не взяла бы такой. Пластик внешний не внушает доверия, но посмотрим, на сколько мужу хватит. Муж газелист, возит в машине. Внутри просто бумажная вкладка с надписью, да еще и не до конца стакана(( это расстроило больше всего. Можно раскрутить и любую картинку свою вложить и пожалуйста. Края топорно обработаны. 300мл наливается прямо до начала резбы - соответствует. Короче, не ведитесь на брендирование. Цена этому стакану рублей 100-150 максимум.'} author={'pochtausera@pochta.pochta'} date={'10 апреля 2022'} />
+                                        <Review rating={'4'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} author={'pochtausera@pochta.pochta'} date={'10 апреля 2022'} />
+                                        <Review rating={'4'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '} author={'pochtausera@pochta.pochta'} date={'10 апреля 2022'} />
+                                        
+                                        <Pagination/>
+                                    </Col>
+                                </Row>
+                            </div>
+                        }
+                    </div>
+                    <BtnFav fav={false} />
                 </section>
 
                 <section className='mb-6'>

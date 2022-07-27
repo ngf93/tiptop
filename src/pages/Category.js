@@ -2,9 +2,9 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { FiChevronRight } from "react-icons/fi";
 
 import ProductCard from '../components/ProductCard';
+import Pagination from '../components/Pagination';
 
 export default function Category(props) {
     return (
@@ -160,28 +160,7 @@ export default function Category(props) {
                             </Col>
                         </Row>
 
-                        <nav className='pagination mt-5'>
-                            <ul>
-                                <li>
-                                    <button type='button'>1</button>
-                                </li>
-                                <li>
-                                    <button type='button' className='active'>2</button>
-                                </li>
-                                <li>
-                                    <button type='button'>3</button>
-                                </li>
-                                <li>
-                                    <button type='button'>...</button>
-                                </li>
-                                <li>
-                                    <button type='button'>8</button>
-                                </li>
-                                <li>
-                                    <button type='button'>Далее <FiChevronRight/></button>
-                                </li>
-                            </ul>
-                        </nav>
+                        <Pagination />
                     </Col>
                 </Row>
             </Container>

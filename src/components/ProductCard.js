@@ -1,12 +1,8 @@
-import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { IoAdd, IoRemove } from "react-icons/io5";
+import BtnFav from './utils/BtnFav';
+import AddToCart from './utils/AddToCart';
 
 export default function ProductCard(props) {
-    const [fav, setFav] = useState(props.fav);
-    const [cart, setCart] = useState(0);
-
     return (
         <div className='product-card'>
             <div className='position-relative mb-2 mb-sm-4'>
@@ -21,13 +17,7 @@ export default function ProductCard(props) {
                         <div className='discount'>-{props.discount}%</div>
                     }
                 </div>
-                <button type='button' className='btn-fav' onClick={()=>setFav((fav)?false:true)}>
-                    {
-                        (fav)
-                        ? <FaHeart/>
-                        : <FaRegHeart/>
-                    }
-                </button>
+                <BtnFav fav={props.fav} />
                 {
                     (props.bonus) &&
                     <div className='bonus'>До {props.bonus} % бонусами</div>
@@ -49,22 +39,7 @@ export default function ProductCard(props) {
                 }
                 <span className='ms-2 fs-13'>₽</span>
             </div>
-            {
-                (cart===0)&&
-                <button type='button' className='btn btn-1 w-100 fs-11' onClick={()=>setCart(cart+1)}><span>В корзину</span></button>
-            }
-            {
-                (cart>0)&&
-                <div className='count-input'>
-                    <button type='button' onClick={()=>setCart(cart-1)}>
-                        <IoRemove/>
-                    </button>
-                    <input type="number" placeholder='0' value={cart} min={0}/>
-                    <button type='button' onClick={()=>setCart(cart+1)}>
-                        <IoAdd/>
-                    </button>
-                </div>
-            }
+            <AddToCart cart={0}/>
         </div>
     );
 }
