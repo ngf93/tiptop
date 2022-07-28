@@ -84,52 +84,47 @@ export default function Header() {
                             <nav className='p-3 p-sm-4'>
                                 <ul className='list-unstyled'>
                                     <li>
-                                        <a href="/">
+                                        <Link to="/catalog">
+                                            <span>Каталог</span>
+                                            <FiChevronRight className='chevron'/>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/favorites">
+                                            <span>Избранное</span>
+                                            <FiChevronRight className='chevron'/>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
                                             <span>О нас</span>
                                             <FiChevronRight className='chevron'/>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/">
-                                            <span>Блог</span>
+                                        <Link to="/articles">
+                                            <span>Статьи</span>
                                             <FiChevronRight className='chevron'/>
-                                        </a>
+                                        </Link>
                                     </li>
-                                    <li>
-                                        <a href="/">
+                                    <Link>
+                                        <Link to="/delivery">
                                             <span>Доставка и оплата</span>
                                             <FiChevronRight className='chevron'/>
-                                        </a>
-                                    </li>
+                                        </Link>
+                                    </Link>
                                     <li>
-                                        <a href="/">
+                                        <Link to="/contacts">
                                             <span>Контакты</span>
                                             <FiChevronRight className='chevron'/>
-                                        </a>
+                                        </Link>
                                     </li>
+                                    
                                     <li>
-                                        <a href="/">
+                                        <Link to="/">
                                             <span>Пункт</span>
                                             <FiChevronRight className='chevron'/>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/">
-                                            <span>Пункт</span>
-                                            <FiChevronRight className='chevron'/>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/">
-                                            <span>Пункт</span>
-                                            <FiChevronRight className='chevron'/>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/">
-                                            <span>Пункт</span>
-                                            <FiChevronRight className='chevron'/>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </nav>
