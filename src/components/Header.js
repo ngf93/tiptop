@@ -58,9 +58,9 @@ export default function Header() {
                             <li><NavLink to="/search"><span>Поиск</span></NavLink></li>
                             <li><a href=""><span>О нас</span></a></li>
                         </ul>
-                        <a href='' className='logo'>
+                        <Link to='/' className='logo'>
                             <img src="imgs/logo-top.svg" />
-                        </a>
+                        </Link>
                         <button type='button' className='menu' onClick={()=>setMobileMenu((mobileMenu===true) ? false : true)}><FiMenu/></button>
                         <ul className='list-unstyled'>
                             <li><NavLink to="/favorites"><span>Избранное</span></NavLink></li>
@@ -107,19 +107,18 @@ export default function Header() {
                                             <FiChevronRight className='chevron'/>
                                         </Link>
                                     </li>
-                                    <Link>
+                                    <li>
                                         <Link to="/delivery">
                                             <span>Доставка и оплата</span>
                                             <FiChevronRight className='chevron'/>
                                         </Link>
-                                    </Link>
+                                    </li>
                                     <li>
                                         <Link to="/contacts">
                                             <span>Контакты</span>
                                             <FiChevronRight className='chevron'/>
                                         </Link>
                                     </li>
-                                    
                                     <li>
                                         <Link to="/">
                                             <span>Пункт</span>
