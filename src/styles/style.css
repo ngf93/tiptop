@@ -13,7 +13,7 @@ p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, tabl
   margin-bottom: 0px;
 }
 
-input, textarea {
+input, textarea, .input {
   background: #ffffff;
   box-shadow: unset;
   border: 1px solid #959595;
@@ -25,7 +25,7 @@ input, textarea {
   display: block;
   transition: 0.3s;
 }
-input:hover, input:focus, textarea:hover, textarea:focus {
+input:hover, input:focus, textarea:hover, textarea:focus, .input:hover, .input:focus {
   border: 1px solid #FBBA00;
 }
 
@@ -70,6 +70,11 @@ select {
   outline: none;
   line-height: normal;
   background: url(imgs/chevron-down.svg) no-repeat 100% center;
+  background-size: auto;
+  padding-right: 1em;
+}
+select.input {
+  background: url(imgs/chevron-down.svg) no-repeat 98% center;
   background-size: auto;
   padding-right: 1em;
 }
@@ -300,6 +305,9 @@ h6 {
 .fs-35 {
   font-size: 3.5em;
 }
+.fs-40 {
+  font-size: 4em;
+}
 
 .fw-3 {
   font-weight: 300;
@@ -364,6 +372,19 @@ h6 {
   text-decoration-thickness: from-font;
 }
 
+.position-unset {
+  position: unset;
+}
+
+.mb-6 {
+  margin-bottom: 6em;
+}
+@media (max-width: 575px) {
+  .mb-6 {
+    margin-bottom: 4em;
+  }
+}
+
 .link {
   font-size: 1.1em;
   color: #000;
@@ -389,13 +410,13 @@ h6 {
   margin-right: 0.5em;
 }
 
-.mb-6 {
-  margin-bottom: 6em;
+.dash-list {
+  list-style: none;
+  padding-left: 0px;
 }
-@media (max-width: 575px) {
-  .mb-6 {
-    margin-bottom: 4em;
-  }
+.dash-list li::before {
+  content: "―";
+  margin-right: 0.25em;
 }
 
 .box {
@@ -464,10 +485,6 @@ h6 {
 }
 .pagination ul li a svg, .pagination ul li button svg {
   stroke-width: 3px;
-}
-
-.position-unset {
-  position: unset;
 }
 
 /* sliders */
@@ -1944,6 +1961,106 @@ article.full p {
   article.full p {
     margin-bottom: 1em;
   }
+}
+
+#delivery-map {
+  position: relative;
+}
+#delivery-map .btns {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+@media (min-width: 992px) {
+  #delivery-map .btns {
+    display: none;
+  }
+}
+#delivery-map .btns button {
+  color: #959595;
+  font-size: 1.4em;
+  padding: 1em;
+  font-weight: 700;
+  border-bottom: 2px solid #DADADA;
+  flex-grow: 1;
+}
+#delivery-map .btns button.active {
+  color: #000;
+  border-bottom: 2px solid #FBBA00;
+}
+@media (max-width: 575px) {
+  #delivery-map .btns button {
+    padding: 0.75em 0;
+  }
+}
+#delivery-map .params {
+  padding-top: 3em;
+  padding-bottom: 6em;
+}
+@media (max-width: 991px) {
+  #delivery-map .params {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+#delivery-map img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 991px) {
+  #delivery-map img {
+    position: relative;
+    height: 500px;
+  }
+}
+@media (max-width: 767px) {
+  #delivery-map img {
+    height: 450px;
+  }
+}
+@media (max-width: 575px) {
+  #delivery-map img {
+    height: 350px;
+  }
+}
+#delivery-map form {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 2px #000000;
+  position: relative;
+  z-index: 10;
+  padding: 3em;
+}
+@media (max-width: 991px) {
+  #delivery-map form {
+    padding: 0px;
+    box-shadow: unset;
+  }
+}
+#delivery-map form .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2em;
+  transition: 0.3s;
+}
+@media (max-width: 1199px) {
+  #delivery-map form .box {
+    padding: 1em;
+  }
+}
+#delivery-map form .box .btn-1 {
+  border-radius: 4px;
+}
+#delivery-map form input:checked + .box {
+  box-shadow: 0px 0px 2px #FBBA00;
 }
 
 .filter {

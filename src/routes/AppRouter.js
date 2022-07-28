@@ -11,6 +11,7 @@ import Favorites from '../pages/Favorites';
 import Contacts from '../pages/Contacts';
 import Articles from '../pages/Articles';
 import Article from '../pages/Article';
+import Delivery from '../pages/Delivery';
 
 export const routeList = [
     {
@@ -26,6 +27,7 @@ export const routeList = [
         {path: 'contacts', element: <Contacts /> , breadcrumb: 'Контактная информация'},
         {path: 'articles', element: <Articles/> , breadcrumb: 'Статьи и советы'},
         {path: 'article', element: <Article/> , breadcrumb: 'Статья'},
+        {path: 'delivery', element: <Delivery /> , breadcrumb: 'Доставка'},
       ],
     },
   ];

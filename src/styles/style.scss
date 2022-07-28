@@ -31,7 +31,7 @@ p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, tabl
     margin-bottom: 0px;
 }
 
-input, textarea {
+input, textarea, .input {
     background: #ffffff;
     box-shadow: unset;
     border: 1px solid #959595;
@@ -86,6 +86,11 @@ select {
     background: url(imgs/chevron-down.svg) no-repeat 100% center;
     background-size: auto;
     padding-right: 1em;
+    &.input {
+        background: url(imgs/chevron-down.svg) no-repeat 98% center;
+        background-size: auto;
+        padding-right: 1em;
+    }
 }
 
 .form-search {
@@ -264,6 +269,7 @@ h6 {
     &-25 {font-size: 2.5em;}
     &-30 {font-size: 3em;}
     &-35 {font-size: 3.5em;}
+    &-40 {font-size: 4em;}
 }
 .fw {
     &-3 {font-weight: 300;}
@@ -291,6 +297,11 @@ h6 {
     text-decoration-thickness: from-font;
 }
 
+.position-unset {position: unset;}
+.mb-6 {
+    margin-bottom: 6em;
+    @media (max-width: 575px){margin-bottom: 4em;}
+}
 .link {
     font-size: 1.1em;
     color: #000;
@@ -299,7 +310,6 @@ h6 {
     &:hover, &:focus {color: $main-color;}
     &:active {color: $dark-gray;}
 }
-
 .list-marked {
     list-style: none;
     padding-left: 0px;
@@ -311,12 +321,14 @@ h6 {
         }
     }
 }
-
-.mb-6 {
-    margin-bottom: 6em;
-    @media (max-width: 575px){margin-bottom: 4em;}
+.dash-list {
+    list-style: none;
+    padding-left: 0px;
+    li::before {
+        content: "―";
+        margin-right: .25em;
+    }
 }
-
 .box {
     background: #FFFFFF;
     box-shadow: 0px 0px 2px #000000;
@@ -343,7 +355,6 @@ h6 {
         }
     }
 }
-
 .pagination {
     font-size: 1.1em;
     @media (max-width: 575px){font-size: 1em;}
@@ -375,8 +386,6 @@ h6 {
     }
 }
 
-
-.position-unset {position: unset;}
 /* sliders */
 .swiper {
     --swiper-navigation-color: #000;
@@ -1555,6 +1564,89 @@ article {
     }
 }
 
+
+#delivery-map {
+    position: relative;
+    .btns {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        margin-bottom: 2em;
+        @media (min-width: 992px){
+            display: none;
+        }
+        button {
+            color: #959595;
+            font-size: 1.4em;
+            padding: 1em;
+            font-weight: 700;
+            border-bottom: 2px solid #DADADA;
+            flex-grow: 1;
+            &.active {
+                color: #000;
+                border-bottom: 2px solid $main-color;
+            } 
+            @media (max-width: 575px){
+                padding: .75em 0;
+            }
+        }
+    }
+    .params {
+        padding-top: 3em;
+        padding-bottom: 6em;
+        @media (max-width: 991px){
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+    }
+    img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @media (max-width: 991px){
+            position: relative;
+            height: 500px;
+        }
+        @media (max-width: 767px){
+            height: 450px;
+        }
+        @media (max-width: 575px){
+            height: 350px;
+        }
+    }
+    form {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 2px #000000;
+        position: relative;
+        z-index: 10;
+        padding: 3em;
+        @media (max-width: 991px){
+            padding: 0px;
+            box-shadow: unset;
+        }
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 2em;
+            transition: $transition;
+            @media (max-width: 1199px){
+                padding: 1em;
+            }
+            .btn-1 {
+                border-radius: 4px;
+            }
+        }
+        input:checked + .box {
+            box-shadow: 0px 0px 2px $main-color;
+        }
+    }
+}
 
 
 .filter {

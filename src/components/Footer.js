@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -11,10 +12,10 @@ export default function Footer() {
                     <Col>
                         <h4>О нас:</h4>
                         <ul className='list-unstyled'>
-                            <li><a href='/'>Контакты</a></li>
-                            <li><a href='/'>Контакты</a></li>
-                            <li><a href='/'>Контакты</a></li>
-                            <li><a href='/'>Контакты</a></li>
+                            <li><Link to='/'>О компании</Link></li>
+                            <li><Link to='/delivery'>Доставка</Link></li>
+                            <li><Link to='/articles'>Статьи и советы</Link></li>
+                            <li><Link to='/contacts'>Контакты</Link></li>
                         </ul>
                     </Col>
                     <Col>
