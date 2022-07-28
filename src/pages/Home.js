@@ -2,18 +2,17 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 import { IoMenu, IoChevronForward } from "react-icons/io5";
 
 import CategoryCard from '../components/CategoryCard';
 import ProductCard from '../components/ProductCard';
-import ArticlePreview from '../components/ArticlePreview';
+import ArticlesSlider from '../components/ArticlesSlider';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper';
+import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
 
 export default function Home() {
     return (
@@ -235,47 +234,12 @@ export default function Home() {
                 <section className='mb-6'>
                     <div className='d-flex justify-content-between mb-4 mb-sm-5'>
                         <h2 className='mb-0'>Статьи и советы</h2>
-                        <a href='/' className='link'>
+                        <Link to='/articles' className='link'>
                             <span className='me-1'>Смотреть все</span>
                             <IoChevronForward/>
-                        </a>
+                        </Link>
                     </div>
-                    <div className='position-relative'>
-                        <Swiper
-                        className='position-unset'
-                            modules={[Navigation]}
-                            spaceBetween={20}
-                            slidesPerView={1}
-                            navigation
-                            breakpoints={{
-                                576: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 16,
-                                },
-                                768: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 20,
-                                },
-                                991: {
-                                    slidesPerView: 3,
-                                    spaceBetween: 20,
-                                },
-                            }}
-                        >
-                            <SwiperSlide>
-                                <ArticlePreview title={'Плитка на кухню. Основные правила при выборе.'} subTitle={'Какую плитку выбрать на кухню?'} imgURL={"imgs/img3.png"}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <ArticlePreview title={'Плитка на кухню. Основные правила при выборе.'} subTitle={'Какую плитку выбрать на кухню?'} imgURL={"imgs/img3.png"}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <ArticlePreview title={'Плитка на кухню. Основные правила при выборе.'} subTitle={'Какую плитку выбрать на кухню?'} imgURL={"imgs/img3.png"}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <ArticlePreview title={'Плитка на кухню. Основные правила при выборе.'} subTitle={'Какую плитку выбрать на кухню?'} imgURL={"imgs/img3.png"}/>
-                            </SwiperSlide>
-                        </Swiper>
-                    </div>
+                    <ArticlesSlider />
                 </section>
             </Container>
         </main>

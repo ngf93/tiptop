@@ -9,6 +9,8 @@ import Category from '../pages/Category';
 import Product from '../pages/Product';
 import Favorites from '../pages/Favorites';
 import Contacts from '../pages/Contacts';
+import Articles from '../pages/Articles';
+import Article from '../pages/Article';
 
 export const routeList = [
     {
@@ -22,6 +24,8 @@ export const routeList = [
         {path: 'product', element: <Product/> , breadcrumb: 'Товар'},
         {path: 'favorites', element: <Favorites/> , breadcrumb: 'Избранное'},
         {path: 'contacts', element: <Contacts /> , breadcrumb: 'Контактная информация'},
+        {path: 'articles', element: <Articles/> , breadcrumb: 'Статьи и советы'},
+        {path: 'article', element: <Article/> , breadcrumb: 'Статья'},
       ],
     },
   ];

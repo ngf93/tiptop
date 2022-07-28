@@ -15,7 +15,7 @@ export default function Contacts() {
                         <VscArrowLeft className='fs-12'/>
                         <span className='ms-2 d-none d-md-inline'>Назад на главную</span>
                     </Link>
-                    <h1 className='inner mb-0 mb-md-5 ms-4 ms-md-0'>Контакты</h1>
+                    <h1 className='inner mb-0 mb-md-5 ms-2 ms-sm-4 ms-md-0'>Контакты</h1>
                 </div>
                 <Row className='flex-lg-row-reverse'>
                     <Col xl={4}>
