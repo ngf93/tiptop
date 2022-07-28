@@ -65,7 +65,7 @@ export default function Header() {
                         <ul className='list-unstyled'>
                             <li><NavLink to="/favorites"><span>Избранное</span></NavLink></li>
                             <li><a href=""><span>Войти</span></a></li>
-                            <li><a href=""><span>Корзина</span></a></li>
+                            <li><NavLink to="/cart"><span>Корзина</span></NavLink></li>
                         </ul>
                     </Container>
                 </nav>
