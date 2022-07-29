@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,9 +6,28 @@ import { Link } from 'react-router-dom';
 import { VscArrowLeft } from "react-icons/vsc";
 import ProductsSlider from '../components/ProductsSlider';
 import Pagination from '../components/Pagination';
+import CartItem from '../components/CartItem';
 
 export default function ShoppingCart() {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(2);
+    const [mobile, setMobile] = useState(false);
+    const [full, setFull] = useState(true);
+
+    useEffect(() => {
+        function updateView() {
+            if (window.matchMedia("(max-width: 991px)").matches) {
+                setMobile(true);
+                setFull(false);
+            } else {
+                setMobile(false);
+                setFull(true);
+            }
+        }
+
+        window.addEventListener('resize', updateView);
+        updateView();
+        return () => window.removeEventListener('resize', updateView);
+    }, []);
 
     return (
         <main>
@@ -28,10 +47,10 @@ export default function ShoppingCart() {
                     {
                         (count>0)
                         ? <Row className='justify-content-between'>
-                            <Col md={8}>
-                                <div className='d-lg-flex align-items-center justify-content-between'>
-                                    <div className='fs-11 fw-7'>Сортировка</div>
-                                    <div className='mt-4 mt-lg-0 d-flex align-items-center justify-content-end'>
+                            <Col lg={8}>
+                                <div className='d-flex align-items-center justify-content-between'>
+                                    <div className='fs-11 fw-7'>Сортировка:</div>
+                                    <div className='d-flex align-items-center justify-content-end'>
                                         <select className='fs-11 fw-7' defaultValue={'val-2'}>
                                             <option value={'val-1'}>Сначала дешёвые</option>
                                             <option value={'val-2'}>Сначала дорогие</option>
@@ -41,24 +60,60 @@ export default function ShoppingCart() {
                                             <option value={'val-6'}>По размеру скидки</option>
                                         </select>
                                         <select className='d-none d-sm-block ms-5 fs-11 fw-7' defaultValue={'val-2'}>
-                                            <option value={'val-1'}>Показывать по 12</option>
-                                            <option value={'val-2'}>Показывать по 24</option>
+                                            <option value={'val-1'}>Показывать по 5</option>
+                                            <option value={'val-2'}>Показывать по 10</option>
                                             <option value={'val-3'}>Показывать все</option>
                                         </select>
                                     </div>
                                 </div>
                                 <hr className='my-3 my-xl-4'/>
-                                <div className='fs-11 fw-7'>Выбрано товаров: 4</div>
+                                <div className='fs-11 fw-7 mb-4'>Выбрано товаров: 4</div>
 
-                                {/* <div className='cart-item'>
-                                    <img src="imgs/img2.png" />
-
-                                </div> */}
+                                <CartItem />
+                                <CartItem />
+                                <CartItem />
+                                <CartItem />
 
                                 <Pagination/>
                             </Col>
-                            <Col md={3}>
-                                <div className='total'></div>
+                            <Col lg={4} xxl={3}>
+                                <div className='total'>
+                                    <h5 className='d-none d-lg-block'>Корзина</h5>
+                                    {
+                                        (mobile === false || full === true) &&
+                                        <>
+                                        <table className='order-3'>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Товары</td>
+                                                    <td>2 500 ₽</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Сбор</td>
+                                                    <td>2 500 ₽</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Скидка</td>
+                                                    <td>2 500 ₽</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Начисление баллов</td>
+                                                    <td>56 Б</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <hr className='order-2'/>
+                                        </>
+                                    }
+                                    
+                                    <div onClick={()=>setFull((full === true)?false:true)} className='order-1 fw-5 fs-13 d-flex align-items-center justify-content-between py-lg-2'>
+                                        <div>Итого</div>
+                                        <div>2 500 ₽</div>
+                                    </div>
+                                    <button className='order-4 btn btn-1 fs-11 w-100 px-4 mt-2'>Перейти к оформлению</button>
+                                </div>
+                                <aside></aside>
+                                <aside></aside>
                             </Col>
                         </Row>
                         : <div className='d-flex flex-column align-items-center py-5'>
