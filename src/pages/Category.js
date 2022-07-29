@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import ProductCard from '../components/ProductCard';
 import Pagination from '../components/Pagination';
 
+
 export default function Category(props) {
     return (
         <main>
