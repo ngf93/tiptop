@@ -28,14 +28,38 @@ input, textarea, .input {
 input:hover, input:focus, textarea:hover, textarea:focus, .input:hover, .input:focus {
   border: 1px solid #FBBA00;
 }
+input.rounded-10, textarea.rounded-10, .input.rounded-10 {
+  border-radius: 10px;
+}
+input.w-min, textarea.w-min, .input.w-min {
+  width: 120px;
+}
+@media (max-width: 1199px) {
+  input.w-min, textarea.w-min, .input.w-min {
+    width: 100px;
+  }
+}
+@media (max-width: 575px) {
+  input.w-min, textarea.w-min, .input.w-min {
+    width: 80px;
+  }
+}
 
+input {
+  --size: 1.25rem;
+}
+@media (max-width: 575px) {
+  input {
+    --size: 1rem;
+  }
+}
 input[type=checkbox] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--size);
+  height: var(--size);
   padding: 0px;
   border-radius: 2px;
   border: 1px solid #A6A6A6;
@@ -54,8 +78,8 @@ input[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--size);
+  height: var(--size);
   padding: 0px;
   border-radius: 50%;
   border: 2px solid #8E8E8E;

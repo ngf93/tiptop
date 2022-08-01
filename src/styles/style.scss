@@ -45,15 +45,31 @@ input, textarea, .input {
     &:hover, &:focus {
         border: 1px solid $main-color;
     }
+    &.rounded-10 {
+        border-radius: 10px;
+    }
+    &.w-min {
+        width: 120px;
+        @media (max-width: 1199px) {
+            width: 100px;
+        }
+        @media (max-width: 575px) {
+            width: 80px;
+        }
+    }
 }
 input {
+    --size: 1.25rem;
+    @media (max-width: 575px) {
+        --size: 1rem;
+    }
     &[type="checkbox"] {
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
         -ms-appearance: none;
-        width: 1.25rem;
-        height: 1.25rem;
+        width: var(--size);
+        height: var(--size);
         padding: 0px;
         border-radius: 2px;
         border: 1px solid #A6A6A6;
@@ -72,17 +88,12 @@ input {
         -webkit-appearance: none;
         -moz-appearance: none;
         -ms-appearance: none;
-        width: 1.25rem;
-        height: 1.25rem;
+        width: var(--size);
+        height: var(--size);
         padding: 0px;
         border-radius: 50%;
         border: 2px solid #8E8E8E;
         position: relative;
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // background-color: #fff;
-        // background-image: url(imgs/mark.svg);
-        // background-size: 80%;
         &::after {
             content: '';
             position: absolute;

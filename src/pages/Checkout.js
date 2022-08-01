@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import { VscArrowLeft, VscChevronDown, VscChevronUp } from "react-icons/vsc";
 
+import Slider from 'rc-slider';
+
 export default function Checkout(props) {
     const [mobile, setMobile] = useState(false);
     const [full, setFull] = useState(true);
@@ -25,6 +27,12 @@ export default function Checkout(props) {
         return () => window.removeEventListener('resize', updateView);
     }, []);
 
+    const bonusMax = 1000;
+    const [bonusVal, setBonusVal] = useState(0);
+    const sliderHandler = (value) => {
+        setBonusVal(value);
+    }
+
     return (
         <main>
             <Container>
@@ -42,7 +50,7 @@ export default function Checkout(props) {
                         </Link>
                         <h1 className='inner mb-0 mb-md-5 ms-2 ms-sm-4 ms-md-0'>Оформление заказа</h1>
                     </div>
-                    <p className='fs-13 mb-5'>Заполните данные для оформления заказа</p>
+                    <p className='fs-13 mb-4 mb-sm-5'>Заполните данные для оформления заказа</p>
                     <form>
                         <Row className='justify-content-between'>
                             <Col lg={7} xxl={6}>
@@ -53,10 +61,10 @@ export default function Checkout(props) {
                                 <input type='text' placeholder='Фамилия' className='fs-11 mb-4'/>
 
                                 <label className='d-block fs-13 fw-5 mb-2'>Номер телефона</label>
-                                <input type='text' placeholder='Номер телефона' className='fs-11 mb-4'/>
+                                <input type='tel' placeholder='Номер телефона' className='fs-11 mb-4'/>
 
                                 <label className='d-block fs-13 fw-5 mb-2'>Электронная почта</label>
-                                <input type='text' placeholder='Адрес электронной почты' className='fs-11 mb-4'/>
+                                <input type='email' placeholder='Адрес электронной почты' className='fs-11 mb-4'/>
 
                                 <label className='d-block fs-13 fw-5 mb-2'>Город</label>
                                 <input type='text' placeholder='Город' className='fs-11 mb-4'/>
@@ -64,18 +72,18 @@ export default function Checkout(props) {
                                 <label className='d-block fs-13 fw-5 mb-2'>Улица</label>
                                 <input type='text' placeholder='Улица' className='fs-11 mb-4'/>
 
-                                <Row md={3}>
+                                <Row md={3} className='gx-2 gx-sm-4'>
                                     <Col>
                                         <label className='d-block fs-13 fw-5 mb-2'>Дом</label>
-                                        <input type='text' placeholder='Дом' className='fs-11 mb-4'/>
+                                        <input type='number' placeholder='Дом' className='fs-11 mb-4'/>
                                     </Col>
                                     <Col>
                                         <label className='d-block fs-13 fw-5 mb-2'>Подъезд</label>
-                                        <input type='text' placeholder='Подъезд' className='fs-11 mb-4'/>
+                                        <input type='number' placeholder='Подъезд' className='fs-11 mb-4'/>
                                     </Col>
                                     <Col>
                                         <label className='d-block fs-13 fw-5 mb-2'>Квартира</label>
-                                        <input type='text' placeholder='Квартира' className='fs-11 mb-4'/>
+                                        <input type='number' placeholder='Квартира' className='fs-11 mb-4'/>
                                     </Col>
                                 </Row>
 
@@ -84,7 +92,7 @@ export default function Checkout(props) {
                             </Col>
                             <Col lg={5}>
                                 <div className='d-block fs-13 fw-5 mb-2'>Способ доставки</div>
-                                <div className='box-2 p-4 mb-4'>
+                                <div className='box-2 p-3 p-sm-4 mb-4 mb-xl-5'>
                                     <label className='fs-13'>
                                         <input type='radio' name='delivery'/>
                                         <span className='ms-3'>Самовывоз</span>
@@ -97,7 +105,7 @@ export default function Checkout(props) {
                                 </div>
 
                                 <div className='d-block fs-13 fw-5 mb-2'>Способ оплаты</div>
-                                <div className='box-2 p-4 mb-4'>
+                                <div className='box-2 p-3 p-sm-4 mb-4 mb-xl-5'>
                                     <label className='fs-13'>
                                         <input type='radio' name='payment'/>
                                         <span className='ms-3'>Оплата картой</span>
@@ -117,8 +125,14 @@ export default function Checkout(props) {
                                 </div>
 
                                 <div className='d-block fs-13 fw-5 mb-2'>Оплата бонусами</div>
-                                <div className='box-2 p-4 mb-4'>
-                                    <p className='fs-13'>Доступно 4589 Бонусов</p>
+                                <div className='box-2 p-3 p-sm-4 mb-4 mb-xl-5'>
+                                    <p className='fs-13 mb-3'>Доступно {bonusMax} Бонусов</p>
+                                    <Slider min={0} value={bonusVal} max={bonusMax} onChange={sliderHandler}/>
+                                    <div className='d-flex align-items-center mt-3 fs-13 fw-7'>
+                                        <span>Будет списано</span>
+                                        <input type='number' className='fw-7 mx-2 mx-xl-3 rounded-10 w-min p-2 text-center' placeholder='0' value={bonusVal} onChange={(e) => setBonusVal(e.target.value)}/>
+                                        <span>Бонусов</span>
+                                    </div>
                                 </div>
 
                                 <div className='total'>
