@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
-import { VscArrowLeft } from "react-icons/vsc";
+import { VscArrowLeft, VscChevronDown, VscChevronUp } from "react-icons/vsc";
 import ProductsSlider from '../components/ProductsSlider';
 import Pagination from '../components/Pagination';
 import CartItem from '../components/CartItem';
@@ -30,9 +30,9 @@ export default function ShoppingCart() {
     }, []);
 
     return (
-        <main>
+        <main className='total-padding'>
             <Container>
-                <section  className='mb-6'>
+                <section className='mb-6'>
                     <div className='d-flex align-items-center d-md-block mb-3 mb-sm-4 mb-md-0'>
                         <Link to="/" className="btn btn-4 fs-11 px-3 mb-md-5">
                             <VscArrowLeft className='fs-12'/>
@@ -78,11 +78,18 @@ export default function ShoppingCart() {
                             </Col>
                             <Col lg={4} xxl={3}>
                                 <div className='total'>
-                                    <h5 className='d-none d-lg-block'>Корзина</h5>
+                                    <h5 onClick={()=>setFull((full === true)?false:true)} className='order-1 d-flex align-items-center mb-2 mb-md-3 mb-lg-4'>
+                                        <span className='me-4'>Корзина</span>
+                                        {
+                                            (full === true)
+                                            ? <VscChevronUp className='d-lg-none fs-12'/>
+                                            : <VscChevronDown className='d-lg-none fs-12'/>
+                                        }
+                                    </h5>
                                     {
                                         (mobile === false || full === true) &&
                                         <>
-                                        <table className='order-3'>
+                                        <table className='order-3 order-lg-2'>
                                             <tbody>
                                                 <tr>
                                                     <td>Товары</td>
@@ -102,15 +109,14 @@ export default function ShoppingCart() {
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <hr className='order-2'/>
+                                        <hr className='order-2 order-lg-3'/>
                                         </>
                                     }
-                                    
-                                    <div onClick={()=>setFull((full === true)?false:true)} className='order-1 fw-5 fs-13 d-flex align-items-center justify-content-between py-lg-2'>
+                                    <div className='order-1 order-lg-4 fw-5 fs-13 d-flex align-items-center justify-content-between py-lg-2'>
                                         <div>Итого</div>
                                         <div>2 500 ₽</div>
                                     </div>
-                                    <button className='order-4 btn btn-1 fs-11 w-100 px-4 mt-2'>Перейти к оформлению</button>
+                                    <Link to="/checkout" className='order-4 btn btn-1 fs-11 w-100 px-4 mt-2'><span>Перейти к оформлению</span></Link>
                                 </div>
                                 <aside></aside>
                                 <aside></aside>
@@ -124,7 +130,7 @@ export default function ShoppingCart() {
                     }
                 </section>
                 
-                <ProductsSlider />
+                <ProductsSlider className='d-none d-lg-block' />
             </Container>
         </main>
     );

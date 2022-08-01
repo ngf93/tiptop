@@ -13,6 +13,7 @@ import Articles from '../pages/Articles';
 import Article from '../pages/Article';
 import Delivery from '../pages/Delivery';
 import ShoppingCart from '../pages/ShoppingCart';
+import Checkout from '../pages/Checkout';
 
 export const routeList = [
     {
@@ -30,6 +31,7 @@ export const routeList = [
         {path: 'article', element: <Article/> , breadcrumb: 'Статья'},
         {path: 'delivery', element: <Delivery /> , breadcrumb: 'Доставка'},
         {path: 'cart', element: <ShoppingCart /> , breadcrumb: 'Корзина'},
+        {path: 'checkout', element: <Checkout /> , breadcrumb: 'Оформление заказа'},
       ],
     },
   ];

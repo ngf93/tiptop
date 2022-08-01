@@ -4,9 +4,9 @@ import { Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-export default function ProductsSlider() {
+export default function ProductsSlider(props) {
     return (
-        <section className='mb-6'>
+        <section className={'mb-6 '+ props.className}>
             <h4 className='fs-20 fw-7 mb-4 mb-md-5'>Вам может понравится</h4>
             <div className='position-relative'>
                 <Swiper
