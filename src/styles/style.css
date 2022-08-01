@@ -79,6 +79,24 @@ input[type=radio]:checked {
 input[type=radio]:checked::after {
   background-color: #FBBA00;
 }
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+input[type=number]:hover, input[type=number]:focus {
+  -moz-appearance: number-input;
+}
+input.from {
+  padding-left: 2em;
+  background: url(imgs/from.svg) no-repeat;
+  background-position: 0.5em 50%;
+  background-size: 1.25em;
+}
 
 label {
   display: flex;
@@ -136,6 +154,33 @@ select.input {
   align-items: center;
   color: #FBBA00;
   font-size: 1.35em;
+}
+
+/* Range Slider */
+.rc-slider-rail {
+  background-color: #DADADA;
+}
+.rc-slider-track {
+  background-color: #FBBA00;
+}
+.rc-slider-handle {
+  border: solid 2px #FBBA00;
+}
+.rc-slider-handle:hover {
+  border-color: #FF5B5B;
+}
+.rc-slider-handle:focus-visible {
+  border-color: #FF5B5B;
+  box-shadow: 0 0 0 3px #FBBA00;
+  outline: none;
+}
+.rc-slider-handle:active {
+  border-color: #FF5B5B;
+  box-shadow: 0 0 5px #FF5B5B;
+}
+.rc-slider-handle-dragging {
+  border-color: #FF5B5B !important;
+  box-shadow: 0 0 0 5px #FBBA00 !important;
 }
 
 button {

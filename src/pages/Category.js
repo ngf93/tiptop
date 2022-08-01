@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,8 +6,26 @@ import Col from 'react-bootstrap/Col';
 import ProductCard from '../components/ProductCard';
 import Pagination from '../components/Pagination';
 
+import Range from 'rc-slider';
+
+
 
 export default function Category(props) {
+    const [rangeVal, setRangeVal] = useState([1000, 2000]);
+
+    const rangeHandler = (value) => {
+        setRangeVal(value);
+    }
+    const rangeValueHandler = (value, i) => {
+        let copy = Object.assign([], rangeVal);
+        copy[i] = value;
+        console.log('copy = '+ copy);
+        setRangeVal(copy);
+    }
+
+    console.log('rangeVal[0] = '+rangeVal[0]);
+    console.log('rangeVal[1] = '+rangeVal[1]);
+
     return (
         <main>
             <Container className='mb-6'>
@@ -26,10 +44,16 @@ export default function Category(props) {
                             <div className='fs-11 fw-7 mb-4'>Фильтры</div>
                             <fieldset>
                                 <legend>Цена ₽</legend>
-                                <Row md={2} className="gx-2 gx-xl-3">
-                                    <Col><input placeholder='От'/></Col>
-                                    <Col><input placeholder='До'/></Col>
+                                <Row md={2} className="gx-2 gx-xl-3 mb-3">
+                                    <Col>
+                                        <input type='number' className='from fw-7 fs-11' placeholder='От' value={rangeVal[0]} onChange={(e) => rangeValueHandler(e.target.value, 0)}/>
+                                    </Col>
+                                    <Col>
+                                        <input type='number' className='from fw-7 fs-11' placeholder='До' value={rangeVal[1]} onChange={(e) => rangeValueHandler(e.target.value, 1)}/>
+                                    </Col>
                                 </Row>
+
+                                <Range range allowCross={false} value={rangeVal} onChange={rangeHandler} min={0} max={10000}/>
                             </fieldset>
 
                             <fieldset>

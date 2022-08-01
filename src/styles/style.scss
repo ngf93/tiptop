@@ -102,6 +102,26 @@ input {
           }
         }
     }
+    &[type="number"]{
+        -moz-appearance: textfield;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+        &:hover, &:focus {-moz-appearance: number-input;}
+    }
+    &.from {
+        padding-left: 2em;
+        background: url(imgs/from.svg) no-repeat;
+        background-position: .5em 50%;
+        background-size: 1.25em;
+    }
+
+    
+
 }
 label {
     display: flex;
@@ -150,6 +170,35 @@ select {
         @include flex-center();
         color: $main-color;
         font-size: 1.35em;
+    }
+}
+
+/* Range Slider */
+.rc-slider {
+    &-rail {
+        background-color: #DADADA;
+    }
+    &-track {
+        background-color: $main-color;
+    }
+    &-handle {
+        border: solid 2px $main-color;
+        &:hover {
+            border-color: $sec-color;
+        }
+        &:focus-visible {
+            border-color: $sec-color;
+            box-shadow: 0 0 0 3px $main-color;
+            outline: none;
+        }
+        &:active {
+            border-color: $sec-color;
+            box-shadow: 0 0 5px $sec-color;
+        }
+        &-dragging {
+            border-color: $sec-color !important;
+            box-shadow: 0 0 0 5px $main-color !important;
+        }
     }
 }
 

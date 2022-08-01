@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'rc-slider/assets/index.css';
 import './styles/style.min.css';
 import './styles/fonts/stylesheet.css';
 
