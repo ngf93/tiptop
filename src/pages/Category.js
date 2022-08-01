@@ -203,7 +203,7 @@ export default function Category(props) {
                                 <fieldset>
                                     <div className='top'>
                                         <legend>Фильтры</legend>
-                                        <button type='button' onClick={handleClose}><VscChromeClose /></button>
+                                        <button type='button' onClick={handleClose}><VscChromeClose className='fs-13'/></button>
                                     </div>
                                     <ul>
                                         <li>
