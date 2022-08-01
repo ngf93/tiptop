@@ -26,7 +26,7 @@ a, a:hover, a:focus, a:active {
     cursor: pointer;
 }
   
-p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, table, ul, ol, dl {
+p, label, span, a, form, fieldset, legend, select, div, blockquote, cite, figure, figcaption, table, ul, ol, dl {
     line-height: normal;
     margin-bottom: 0px;
 }
@@ -119,9 +119,6 @@ input {
         background-position: .5em 50%;
         background-size: 1.25em;
     }
-
-    
-
 }
 label {
     display: flex;
@@ -862,7 +859,6 @@ main {
         padding-top: 3em;
     }
 }
-
 
 .main-slider {
     border-radius: 0px 0px 20px 20px;
@@ -1735,6 +1731,8 @@ article {
     }
 }
 
+
+/* Filter (desktop) */
 .filter {
     position: sticky;
     top: 140px;
@@ -1752,6 +1750,71 @@ article {
         }
     }
 }
+/* Filter (mobile) */
+.filterMobile {
+    --top: 60px;
+    --bottom: 70px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 575px){
+        --top: 50px;
+        --bottom: 50px;
+    }
+    .main {
+        height: calc(100vh - var(--bottom));
+        fieldset {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .top {
+            @include flex-center();
+            border-bottom: 1px solid #DADADA;
+            padding: 0 1em;
+            height: var(--top);
+            legend {
+                flex:1;
+                text-align: center;
+                font-size: 1.5em;
+                font-weight: 700;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0 0.5em;
+            }
+            button {
+                @include flex-center();
+                font-size: 1.2em;
+            }
+        }
+        ul {
+            height: calc(100vh - var(--top) - var(--bottom));
+            list-style: none;
+            padding-left: 0px;
+            overflow-y: auto;
+            font-size: 1.2em;
+            li {
+                padding: 1em;
+                border-bottom: 1px solid #DADADA;
+                button {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .bottom {
+        background-color: #F2F2F2;
+        padding: 0 1em;
+        height: var(--bottom);
+        box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.13);
+        @include flex-center();
+    }
+}
+
 
 #contacts-page {
     .box {
@@ -2035,6 +2098,16 @@ footer {
                 }
             }
         }
+    }
+}
+
+.offcanvas {
+    &-start {
+        width: 500px;
+    }
+    &-body {
+        padding: 0px;
+        position: relative;
     }
 }
 

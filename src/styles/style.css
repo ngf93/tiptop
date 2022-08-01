@@ -8,7 +8,7 @@ a, a:hover, a:focus, a:active {
   cursor: pointer;
 }
 
-p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, table, ul, ol, dl {
+p, label, span, a, form, fieldset, legend, select, div, blockquote, cite, figure, figcaption, table, ul, ol, dl {
   line-height: normal;
   margin-bottom: 0px;
 }
@@ -2146,6 +2146,7 @@ article.full p {
   box-shadow: 0px 0px 2px #FBBA00;
 }
 
+/* Filter (desktop) */
 .filter {
   position: -webkit-sticky;
   position: sticky;
@@ -2163,6 +2164,79 @@ article.full p {
 }
 .filter fieldset label {
   margin-bottom: 0.75em;
+}
+
+/* Filter (mobile) */
+.filterMobile {
+  --top: 60px;
+  --bottom: 70px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 575px) {
+  .filterMobile {
+    --top: 50px;
+    --bottom: 50px;
+  }
+}
+.filterMobile .main {
+  height: calc(100vh - var(--bottom));
+}
+.filterMobile .main fieldset {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.filterMobile .main .top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #DADADA;
+  padding: 0 1em;
+  height: var(--top);
+}
+.filterMobile .main .top legend {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0.5em;
+}
+.filterMobile .main .top button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+.filterMobile .main ul {
+  height: calc(100vh - var(--top) - var(--bottom));
+  list-style: none;
+  padding-left: 0px;
+  overflow-y: auto;
+  font-size: 1.2em;
+}
+.filterMobile .main ul li {
+  padding: 1em;
+  border-bottom: 1px solid #DADADA;
+}
+.filterMobile .main ul li button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.filterMobile .bottom {
+  background-color: #F2F2F2;
+  padding: 0 1em;
+  height: var(--bottom);
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.13);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #contacts-page .box {
@@ -2492,4 +2566,12 @@ footer .mobile nav ul li a.active .stroke path {
 }
 footer .mobile nav ul li a.active .fill path, footer .mobile nav ul li a.active .fill-active path {
   fill: #FBBA00;
+}
+
+.offcanvas-start {
+  width: 500px;
+}
+.offcanvas-body {
+  padding: 0px;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
