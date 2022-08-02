@@ -26,7 +26,7 @@ export default function Login() {
                                 </label>
 
                                 <div className='d-flex justify-content-sm-center align-items-center mt-3'>
-                                    <button type='button' className='btn btn-1 fs-13'><span>Войти</span></button>
+                                    <Link to='/personal-account' className='btn btn-1 fs-13'><span>Войти</span></Link>
                                     <Link to='/reset-password' className='blue ms-4 fw-5 fs-11'>Забыли пароль?</Link>
                                 </div>
 
