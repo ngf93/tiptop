@@ -14,6 +14,9 @@ import Article from '../pages/Article';
 import Delivery from '../pages/Delivery';
 import ShoppingCart from '../pages/ShoppingCart';
 import Checkout from '../pages/Checkout';
+import Registration from '../pages/Registration';
+import Login from '../pages/Login';
+import ResetPassword from '../pages/ResetPassword';
 
 export const routeList = [
     {
@@ -32,6 +35,9 @@ export const routeList = [
         {path: 'delivery', element: <Delivery /> , breadcrumb: 'Доставка'},
         {path: 'cart', element: <ShoppingCart /> , breadcrumb: 'Корзина'},
         {path: 'checkout', element: <Checkout /> , breadcrumb: 'Оформление заказа'},
+        {path: 'registration', element: <Registration /> , breadcrumb: 'Регистрация'},
+        {path: 'login', element: <Login /> , breadcrumb: 'Вход в личный кабинет'},
+        {path: 'reset-password', element: <ResetPassword /> , breadcrumb: 'Восстановление пароля'},
       ],
     },
   ];

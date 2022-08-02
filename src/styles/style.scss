@@ -137,6 +137,26 @@ label {
     span {flex: 1;}
 }
 
+.password {
+    position: relative;
+    input {
+        font-size: inherit;
+        font-weight: inherit;
+        position: relative;
+        z-index: 1;
+    }
+    button {
+        position: absolute;
+        top: 0px;
+        right: 0.5em;
+        z-index: 5;
+        color: #777;
+        height: 100%;
+        width: 2em;
+        font-size: 1.2em;
+    }
+}
+
 select {
     border: none;
     appearance: none;
@@ -382,6 +402,8 @@ h6 {
 .blue {color: $blue;}
 .gray {color: #767474;}
 .light-gray {color: #A1A1A1;}
+.success-color {color: #5BC242;}
+.danger-color {color: #F90000;}
 
 .bb-1 {border-bottom: 1px solid;}
 .td-under {
@@ -865,9 +887,18 @@ main {
     z-index: 1;
     min-height: calc(100vh - 140px - 500px);
     padding-top: 4em;
+    @media (max-width: 1199px){
+        min-height: calc(100vh - 140px - 450px);
+    }
+    @media (max-width: 991px){
+        min-height: calc(100vh - 140px - 50px);
+    }
     @media (max-width: 767px){
-        min-height: calc(100vh - 110px - 500px);
+        min-height: calc(100vh - 110px - 50px);
         padding-top: 3em;
+    }
+    @media (max-width: 575px){
+        min-height: calc(100vh - 70px - 50px);
     }
 }
 
@@ -2015,11 +2046,26 @@ aside {
         background-color: #DADADA;
         margin: 1em 0;
         opacity: 1;
-        // @media (max-width: 991px){
-        //     margin: .5em 0;
-        // }
     }
 }
+
+
+#enter-page {
+    padding: 6em 0;
+    @media (max-width: 1199px){
+        padding: 5em 0;
+    }
+    @media (max-width: 991px){
+        padding: 4em 0;
+    }
+    @media (max-width: 767px){
+        padding: 3em 0;
+    }
+    @media (max-width: 575px){
+        padding: 2em 0;
+    }
+}
+
 
 footer {
     height: 500px;

@@ -64,7 +64,7 @@ export default function Header() {
                         <button type='button' className='menu' onClick={()=>setMobileMenu((mobileMenu===true) ? false : true)}><FiMenu/></button>
                         <ul className='list-unstyled'>
                             <li><NavLink to="/favorites"><span>Избранное</span></NavLink></li>
-                            <li><a href=""><span>Войти</span></a></li>
+                            <li><NavLink to="/login"><span>Войти</span></NavLink></li>
                             <li><NavLink to="/cart"><span>Корзина</span></NavLink></li>
                         </ul>
                     </Container>
