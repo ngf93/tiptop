@@ -2559,7 +2559,12 @@ aside {
 
 /* Account */
 .account-nav {
-  padding: 1.25em 0;
+  padding: 1.25em 0px;
+}
+@media (max-width: 991px) {
+  .account-nav {
+    padding: 0px;
+  }
 }
 .account-nav ul {
   list-style: none;
@@ -2577,7 +2582,7 @@ aside {
   font-weight: 500;
   text-align: left;
 }
-@media (max-width: 575px) {
+@media (max-width: 991px) {
   .account-nav ul li a, .account-nav ul li button {
     font-size: 1.5em;
     font-weight: 700;
@@ -2601,6 +2606,11 @@ aside {
   background-color: #FBBA00;
   border-radius: 2.5px;
 }
+@media (min-width: 992px) {
+  .account-nav ul li a svg, .account-nav ul li button svg {
+    display: none;
+  }
+}
 .account-nav ul li button::after {
   content: "";
   position: absolute;
@@ -2611,9 +2621,38 @@ aside {
   background-color: #DADADA;
 }
 @media (max-width: 575px) {
+  .account-nav ul li button::after {
+    left: 0px;
+    right: 0px;
+  }
+}
+@media (max-width: 991px) {
   .account .box-2 {
     box-shadow: none;
     border-radius: unset;
+  }
+}
+
+.order {
+  margin-bottom: 3em;
+}
+.order hr {
+  background-color: #DADADA;
+  height: 1px;
+  width: 100%;
+  margin: 1em 0px;
+  opacity: 1;
+}
+.order .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3em;
+}
+@media (max-width: 767px) {
+  .order .info {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

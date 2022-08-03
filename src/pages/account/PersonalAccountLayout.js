@@ -6,7 +6,8 @@ import Col from 'react-bootstrap/Col';
 
 const PersonalAccountLayout = ({isMobile}) => {
     return <>
-        {isMobile
+        {   
+            isMobile
             ? <Outlet/>
             : <Row>
                 <Col md={4}>
@@ -15,7 +16,8 @@ const PersonalAccountLayout = ({isMobile}) => {
                 <Col md={8}>
                     <Outlet/>
                 </Col>
-            </Row>}
+            </Row>
+        }
     </>
 
 };
