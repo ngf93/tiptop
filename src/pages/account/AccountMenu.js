@@ -14,13 +14,13 @@ export default function AccountMenu() {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='purchase-history'>
+                    <NavLink to='history'>
                         <span>История покупок</span>
                         <GrFormNext />
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='delivery-addresses'>
+                    <NavLink to='addresses'>
                         <span>Адреса доставок</span>
                         <GrFormNext />
                     </NavLink>

@@ -5,6 +5,9 @@ import UserProfile from '../pages/account/UserProfile';
 import PersonalAccountLayout from '../pages/account/PersonalAccountLayout';
 import PurchaseHistory from '../pages/account/PurchaseHistory';
 import OrderPage from '../pages/account/OrderPage';
+import Addresses from '../pages/account/Addresses';
+import CreatAddress from '../pages/account/CreatAddress';
+import EditAddress from '../pages/account/EditAddress';
 
 const PersonalAccountRouter = ({isMobile}) => {
     return (
@@ -15,11 +18,13 @@ const PersonalAccountRouter = ({isMobile}) => {
                     : <Route index element={<Navigate to="profile" replace={true} />} />
                 }
                 <Route path="profile" element={<UserProfile/>}/>
-                <Route path="purchase-history" element={<PurchaseHistory/>}/>
-                <Route path="delivery-addresses" element={<UserProfile/>}/>
+                <Route path="history" element={<PurchaseHistory/>}/>
+                <Route path="addresses" element={<Addresses/>}/>
+                <Route path="addresses/add" element={<CreatAddress />}/>
+                <Route path="addresses/edit" element={<EditAddress />}/>
                 <Route path="bonus-card" element={<UserProfile/>}/>
             </Route>
-            <Route path="purchase-history/order" element={<OrderPage/>}/>
+            <Route path="history/order" element={<OrderPage/>}/>
         </Routes>
     );
 };

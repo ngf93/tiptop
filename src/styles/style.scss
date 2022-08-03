@@ -306,12 +306,18 @@ button {
             background: #959595;
             color: #fff;
         }
+        @media (max-width: 575px){
+            border-radius: 5px;
+        }
     }
     &-4 {
         border-radius: 10px;
         border: 1px solid #F2F2F2;
         background: #F2F2F2;
         color: #000;
+        @media (max-width: 575px){
+            border-radius: 5px;
+        }
     }
     &:disabled {
         filter: grayscale(1);
@@ -2195,6 +2201,21 @@ aside {
             @media (max-width: 767px){
                 font-size: 1.2em;
             }
+        }
+    }
+}
+.address {
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    border-radius: 20px;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    @media (max-width: 767px){
+        button.btn {
+            color: #fff;
+            padding: 0.4em;
         }
     }
 }

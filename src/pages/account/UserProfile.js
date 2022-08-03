@@ -17,31 +17,38 @@ export default function UserProfile() {
                     </div>
                     
                     <form>
-                        <label htmlFor='user-name' className='fs-13 fw-7 mb-2'>ФИО</label>
-                        <input type='text' id="user-name" placeholder='ФИО' className='fs-11 fw-5 mb-3 mb-sm-4'/>
-
-                        <label htmlFor='phone' className='fs-13 fw-7 mb-2'>Номер телефона</label>
-                        <input type='tel' id="phone" placeholder='Телефон' className='fs-11 fw-5 mb-3 mb-sm-4'/>
-
-                        <label htmlFor='email' className='fs-13 fw-7 mb-2'>Электронная почта</label>
-                        <input type='email' id="email" placeholder='Электронная почта' className='fs-11 fw-5 mb-3 mb-sm-4'/>
-
-                        <label htmlFor='birthday' className='fs-13 fw-7 mb-2'>Дата рождения</label>
-                        <input type='date' id="birthday" className='fs-11 fw-5 mb-3 mb-sm-4'/>
-
-                        <div className='fs-13 fw-7 mb-2'>Пол</div>
-                        <div className='d-flex fs-13'>
-                            <label>
-                                <input type='radio' name='gender'/>
-                                <span className='ms-2'>Мужской</span>
-                            </label>
-                            <label className='ms-5'>
-                                <input type='radio' name='gender'/>
-                                <span className='ms-2'>Женский</span>
-                            </label>
+                        <div className='mb-3 mb-sm-4'>
+                            <label htmlFor='user-name' className='fs-13 fw-7 mb-2'>ФИО</label>
+                            <input type='text' id="user-name" placeholder='ФИО' className='fs-11 fw-5'/>
                         </div>
-
-                        <button type='button' className='btn btn-1 fs-11 mt-4'>
+                        <div className='mb-3 mb-sm-4'>
+                            <label htmlFor='phone' className='fs-13 fw-7 mb-2'>Номер телефона</label>
+                            <input type='tel' id="phone" placeholder='Телефон' className='fs-11 fw-5'/>
+                            <div className='fs-09 fw-5 mt-2'>Код подтверждения будет выслан Вам на новый номер телефона</div>
+                            <button type='button' className='btn btn-1 fs-09 mt-2'><span>Получить код</span></button>
+                        </div>
+                        <div className='mb-3 mb-sm-4'>
+                            <label htmlFor='email' className='fs-13 fw-7 mb-2'>Электронная почта</label>
+                            <input type='email' id="email" placeholder='Электронная почта' className='fs-11 fw-5'/>
+                        </div>
+                        <div className='mb-3 mb-sm-4'>
+                            <label htmlFor='birthday' className='fs-13 fw-7 mb-2'>Дата рождения</label>
+                            <input type='date' id="birthday" className='fs-11 fw-5'/>
+                        </div>
+                        <div className='mb-3 mb-sm-4'>
+                            <div className='fs-13 fw-7 mb-2'>Пол</div>
+                            <div className='d-flex fs-13'>
+                                <label>
+                                    <input type='radio' name='gender'/>
+                                    <span className='ms-2'>Мужской</span>
+                                </label>
+                                <label className='ms-5'>
+                                    <input type='radio' name='gender'/>
+                                    <span className='ms-2'>Женский</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button type='button' className='btn btn-1 fs-11'>
                             <span>Сохранить</span>
                         </button>
                     </form>

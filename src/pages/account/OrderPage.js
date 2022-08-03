@@ -29,7 +29,7 @@ export default function OrderPage() {
     return (
         <div className='order-page'>
             <div className='d-flex align-items-center d-md-block mb-2 mb-sm-4 mb-md-4'>
-                <Link to="/personal-account/purchase-history" className="btn btn-4 fs-11 px-2 px-sm-3 mb-md-5">
+                <Link to="/personal-account/history" className="btn btn-4 fs-11 px-2 px-sm-3 mb-md-5">
                     <VscArrowLeft className='fs-12'/>
                     <span className='ms-2 d-none d-md-inline'>Назад в историю покупок</span>
                 </Link>
