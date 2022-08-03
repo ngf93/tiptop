@@ -4,9 +4,9 @@ import AccountMenu from '../pages/account/AccountMenu';
 import UserProfile from '../pages/account/UserProfile';
 import PersonalAccountLayout from '../pages/account/PersonalAccountLayout';
 import PurchaseHistory from '../pages/account/PurchaseHistory';
+import OrderPage from '../pages/account/OrderPage';
 
 const PersonalAccountRouter = ({isMobile}) => {
-
     return (
         <Routes>
             <Route path="/" element={<PersonalAccountLayout isMobile={isMobile}/>}>
@@ -19,6 +19,7 @@ const PersonalAccountRouter = ({isMobile}) => {
                 <Route path="delivery-addresses" element={<UserProfile/>}/>
                 <Route path="bonus-card" element={<UserProfile/>}/>
             </Route>
+            <Route path="purchase-history/order" element={<OrderPage/>}/>
         </Routes>
     );
 };

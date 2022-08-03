@@ -35,7 +35,7 @@ export default function Checkout(props) {
     }
 
     return (
-        <main>
+        <main className='total-padding'>
             <Container>
                 <nav className='breadcrumbs'>
                     <ul>

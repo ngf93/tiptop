@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
-import {Link} from 'react-router-dom';
 import PersonalAccountRouter from '../../routes/PersonalAccountRouter';
 
 export default function PersonalAccount() {
@@ -23,7 +22,6 @@ export default function PersonalAccount() {
     return (
         <main>
             <Container className='account mb-6'>
-                <h1 className='inner d-none d-lg-block'>Личный кабинет</h1>
                 <PersonalAccountRouter isMobile={mob}/>
             </Container>
         </main>

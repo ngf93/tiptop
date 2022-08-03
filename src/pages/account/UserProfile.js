@@ -13,7 +13,7 @@ export default function UserProfile() {
                         <Link to="/personal-account" className="btn btn-4 fs-11 px-2 px-sm-3">
                             <VscArrowLeft className='fs-12'/>
                         </Link>
-                        <h2 className='mb-0 ms-2 ms-sm-4'>Личные данные</h2>
+                        <h1 className='inner mb-0 ms-2 ms-sm-4'>Личные данные</h1>
                     </div>
                     
                     <form>
