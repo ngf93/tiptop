@@ -40,9 +40,8 @@ export default function Header() {
                                     <FiNavigation/>
                                     <span className='ms-2'>Город</span>
                                 </button>
-                                <button type="button" className='ms-4'>Пункт</button>
-                                <button type="button" className='ms-4'>Пункт</button>
-                                <button type="button" className='ms-4'>Пункт</button>
+                                <Link to="/articles" className='ms-4'>Статьи и советы</Link>
+                                <Link to="/delivery" className='ms-4'>Доставка</Link>
                                 <Link to="/contacts" className='ms-4'>Контакты</Link>
                             </div>
                             <div>
@@ -119,12 +118,6 @@ export default function Header() {
                                             <FiChevronRight className='chevron'/>
                                         </Link>
                                     </li>
-                                    <li>
-                                        <Link to="/">
-                                            <span>Пункт</span>
-                                            <FiChevronRight className='chevron'/>
-                                        </Link>
-                                    </li>
                                 </ul>
                             </nav>
                             <hr className='m-0'/>
@@ -145,192 +138,192 @@ export default function Header() {
                             <h5>Каталог</h5>
                             <ul>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <FiBookmark className='icon'/>
                                         <span>Стройматериалы</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/' className='active'>
+                                    <Link to='/catalog/category' className='active'>
                                         <FiBookmark className='icon'/>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <FiBookmark className='icon'/>
                                         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <FiBookmark className='icon'/>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <FiBookmark className='icon'/>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <FiBookmark className='icon'/>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <FiBookmark className='icon'/>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <FiBookmark className='icon'/>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
                         <div class="level-2">
                             <ul>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Стройматериалы</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/' className='active'>
+                                    <Link to='/catalog/category' className='active'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
                         <div class="level-3">
                             <ul>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Стройматериалы</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/' className='active'>
+                                    <Link to='/catalog/category' className='active'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href='/'>
+                                    <Link to='/catalog/category'>
                                         <span>Первый уровень 1</span>
                                         <FiChevronRight className='chevron'/>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
                         <div class="level-4">
                             <Row xs={2} className="g-3 g-xl-4">
                                 <Col>
-                                    <div className='brand'>
+                                    <Link to='/catalog/category' className='brand'>
                                         <img src="imgs/img4.png" alt='Название бренда'/>
                                         <h6>Название бренда</h6>
-                                    </div>
+                                    </Link>
                                 </Col>
                                 <Col>
-                                    <div className='brand'>
+                                    <Link to='/catalog/category' className='brand'>
                                         <img src="imgs/img4.png" alt='Название бренда'/>
                                         <h6>Название бренда</h6>
-                                    </div>
+                                    </Link>
                                 </Col>
                                 <Col>
-                                    <div className='brand'>
+                                    <Link to='/catalog/category' className='brand'>
                                         <img src="imgs/img4.png" alt='Название бренда'/>
                                         <h6>Название бренда</h6>
-                                    </div>
+                                    </Link>
                                 </Col>
                                 <Col>
-                                    <div className='brand'>
+                                    <Link to='/catalog/category' className='brand'>
                                         <img src="imgs/img4.png" alt='Название бренда'/>
                                         <h6>Название бренда</h6>
-                                    </div>
+                                    </Link>
                                 </Col>
                             </Row>
                         </div>

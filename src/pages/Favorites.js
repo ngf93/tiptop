@@ -37,40 +37,40 @@ export default function Favorites() {
                 <hr className='my-4 my-xl-5'/>
                 <Row xs={2} md={3} lg={4} className="gy-4 gx-3 g-sm-5 g-md-4 g-xl-5">
                     <Col>
-                        <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        <ProductCard link={'/catalog/category/product'} link={'/catalog/category/product'} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </Col>
                     <Col>
-                        <ProductCard code={'0001'} title={'Название товара'} price={'625,00'} fav={true} discount={'25'} bonus={'20'} />
+                        <ProductCard link={'/catalog/category/product'} code={'0001'} title={'Название товара'} price={'625,00'} fav={true} discount={'25'} bonus={'20'} />
                     </Col>
                     <Col>
-                        <ProductCard code={''} title={'Название товара'} price={'625,00'} fav={true} discount={'5'} bonus={''}/>
+                        <ProductCard link={'/catalog/category/product'} code={''} title={'Название товара'} price={'625,00'} fav={true} discount={'5'} bonus={''}/>
                     </Col>
                     <Col>
-                        <ProductCard code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
+                        <ProductCard link={'/catalog/category/product'} code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
                     </Col>
                     <Col>
-                        <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        <ProductCard link={'/catalog/category/product'} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </Col>
                     <Col>
-                        <ProductCard code={'0001'} title={'Название товара'} price={'625,00'} fav={true} discount={'25'} bonus={'20'} />
+                        <ProductCard link={'/catalog/category/product'} code={'0001'} title={'Название товара'} price={'625,00'} fav={true} discount={'25'} bonus={'20'} />
                     </Col>
                     <Col>
-                        <ProductCard code={''} title={'Название товара'} price={'625,00'} fav={true} discount={'5'} bonus={''}/>
+                        <ProductCard link={'/catalog/category/product'} code={''} title={'Название товара'} price={'625,00'} fav={true} discount={'5'} bonus={''}/>
                     </Col>
                     <Col>
-                        <ProductCard code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
+                        <ProductCard link={'/catalog/category/product'} code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
                     </Col>
                     <Col>
-                        <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        <ProductCard link={'/catalog/category/product'} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </Col>
                     <Col>
-                        <ProductCard code={'0001'} title={'Название товара'} price={'625,00'} fav={true} discount={'25'} bonus={'20'} />
+                        <ProductCard link={'/catalog/category/product'} code={'0001'} title={'Название товара'} price={'625,00'} fav={true} discount={'25'} bonus={'20'} />
                     </Col>
                     <Col>
-                        <ProductCard code={''} title={'Название товара'} price={'625,00'} fav={true} discount={'5'} bonus={''}/>
+                        <ProductCard link={'/catalog/category/product'} code={''} title={'Название товара'} price={'625,00'} fav={true} discount={'5'} bonus={''}/>
                     </Col>
                     <Col>
-                        <ProductCard code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
+                        <ProductCard link={'/catalog/category/product'} code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
                     </Col>
                 </Row>
 

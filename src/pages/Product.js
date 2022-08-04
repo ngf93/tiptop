@@ -14,6 +14,7 @@ import AddToCart from '../components/utils/AddToCart';
 import Review from '../components/Review';
 import Pagination from '../components/Pagination';
 import ProductsSlider from '../components/ProductsSlider';
+import Breadcrumbs from '../components/utils/Breadcrumbs';
 
 export default function Product() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -22,13 +23,7 @@ export default function Product() {
     return (
         <main>
             <Container>
-                <nav className='breadcrumbs'>
-                    <ul>
-                        <li><a href="/">Каталог</a></li>
-                        <li><a href="/">Плитка</a></li>
-                        <li><a href="/">Товар</a></li>
-                    </ul>
-                </nav>
+                <Breadcrumbs/>
 
                 <section className='product-full mb-6'>
                     <Row lg={2} className="mb-4 mb-sm-5">

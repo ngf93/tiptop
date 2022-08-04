@@ -10,6 +10,7 @@ import Range from 'rc-slider';
 
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { VscChromeClose, VscChevronRight } from "react-icons/vsc";
+import Breadcrumbs from '../components/utils/Breadcrumbs';
 
 export default function Category(props) {
     const [show, setShow] = useState(false);
@@ -33,12 +34,7 @@ export default function Category(props) {
         <>
             <main>
                 <Container className='mb-6'>
-                    <nav className='breadcrumbs'>
-                        <ul>
-                            <li><a href="/">Каталог</a></li>
-                            <li><a href="/">Плитка</a></li>
-                        </ul>
-                    </nav>
+                    <Breadcrumbs/>
 
                     <h1 className='inner'>Плитка</h1>
 

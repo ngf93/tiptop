@@ -7,6 +7,7 @@ import { VscArrowLeft, VscChevronDown, VscChevronUp } from "react-icons/vsc";
 
 import Slider from 'rc-slider';
 import useIsMobile from '../hooks/isMobile';
+import Breadcrumbs from '../components/utils/Breadcrumbs';
 
 export default function Checkout() {
     const [full, setFull] = useState(true);
@@ -28,12 +29,7 @@ export default function Checkout() {
     return (
         <main className='total-padding'>
             <Container>
-                <nav className='breadcrumbs'>
-                    <ul>
-                        <li><a href="/">Корзина</a></li>
-                        <li><a href="/">Оформление заказа</a></li>
-                    </ul>
-                </nav>
+                <Breadcrumbs/>
                 {
                     (succ)
                     ? <section className='py-5 mb-6'>
@@ -45,13 +41,7 @@ export default function Checkout() {
                             </Link>
                     </section>
                     : <section id="checkout" className='mb-6'>
-                        <div className='d-flex align-items-center d-md-block mb-2 mb-sm-4 mb-md-0'>
-                            <Link to="/" className="btn-4 fs-11 px-3 mb-md-5">
-                                <VscArrowLeft className='fs-12'/>
-                                <span className='ms-2 d-none d-md-inline'>Назад на главную</span>
-                            </Link>
-                            <h1 className='inner mb-0 mb-md-5 ms-2 ms-sm-4 ms-md-0'>Оформление заказа</h1>
-                        </div>
+                        <h1 className='inner mb-2 mb-sm-4 mb-md-5'>Оформление заказа</h1>
                         <p className='fs-13 mb-4 mb-sm-5'>Заполните данные для оформления заказа</p>
                         <form>
                             <Row className='justify-content-between'>
