@@ -40,7 +40,7 @@ export default function Home() {
                                 <li className='col-7'>ЭКОЛОГИЧНОСТЬ</li>
                                 <li className='col-5'>СТОЙКОСТЬ</li>
                             </ul>
-                            <button type="button" className='btn btn-2 fs-13 mt-3 mt-sm-4'>подробнее</button>
+                            <button type="button" className='btn-2 fs-13 mt-3 mt-sm-4'>подробнее</button>
                         </Col>
                     </Row>
                 </Container>
@@ -61,7 +61,7 @@ export default function Home() {
                                 <li className='col-7'>ЭКОЛОГИЧНОСТЬ</li>
                                 <li className='col-5'>СТОЙКОСТЬ</li>
                             </ul>
-                            <button type="button" className='btn btn-2 fs-13 mt-4'>подробнее</button>
+                            <button type="button" className='btn-2 fs-13 mt-4'>подробнее</button>
                         </Col>
                     </Row>
                 </Container>
@@ -82,7 +82,7 @@ export default function Home() {
                                 <li className='col-7'>ЭКОЛОГИЧНОСТЬ</li>
                                 <li className='col-5'>СТОЙКОСТЬ</li>
                             </ul>
-                            <button type="button" className='btn btn-2 fs-13 mt-4'>подробнее</button>
+                            <button type="button" className='btn-2 fs-13 mt-4'>подробнее</button>
                         </Col>
                     </Row>
                 </Container>

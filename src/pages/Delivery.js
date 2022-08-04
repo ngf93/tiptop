@@ -28,7 +28,7 @@ export default function Delivery(props) {
         <main>
             <Container className='mb-4 mb-sm-5'>
                 <div className='d-flex align-items-center d-md-block mb-3 mb-sm-4 mb-md-0'>
-                    <Link to="/" className="btn btn-4 fs-11 px-3 mb-md-5">
+                    <Link to="/" className="btn-4 fs-11 px-3 mb-md-5">
                         <VscArrowLeft className='fs-12'/>
                         <span className='ms-2 d-none d-md-inline'>Назад на главную</span>
                     </Link>
@@ -74,7 +74,7 @@ export default function Delivery(props) {
                                                 <div className='box'>
                                                     <GrDeliver className='fs-40'/>
                                                     <span className='fs-11 fw-7 mt-2'>До 5 кг</span>
-                                                    <div className='btn btn-1 fw-4 px-2 py-1 mt-2'>от 800 ₽</div>
+                                                    <div className='btn-1 fw-4 px-2 py-1 mt-2'>от 800 ₽</div>
                                                 </div>
                                             </label>
                                         </Col>
@@ -84,7 +84,7 @@ export default function Delivery(props) {
                                                 <div className='box'>
                                                     <GrDeliver className='fs-40'/>
                                                     <span className='fs-11 fw-7 mt-2'>До 500 кг</span>
-                                                    <div className='btn btn-1 fw-4 px-2 py-1 mt-2'>от 1300 ₽</div>
+                                                    <div className='btn-1 fw-4 px-2 py-1 mt-2'>от 1300 ₽</div>
                                                 </div>
                                             </label>
                                         </Col>
@@ -94,7 +94,7 @@ export default function Delivery(props) {
                                                 <div className='box'>
                                                     <GrDeliver className='fs-40'/>
                                                     <span className='fs-11 fw-7 mt-2'>До 1000 кг</span>
-                                                    <div className='btn btn-1 fw-4 px-2 py-1 mt-2'>от 1800 ₽</div>
+                                                    <div className='btn-1 fw-4 px-2 py-1 mt-2'>от 1800 ₽</div>
                                                 </div>
                                             </label>
                                         </Col>
@@ -104,7 +104,7 @@ export default function Delivery(props) {
                                                 <div className='box'>
                                                     <GrDeliver className='fs-40'/>
                                                     <span className='fs-11 fw-7 mt-2'>До 5 кг</span>
-                                                    <div className='btn btn-1 fw-4 px-2 py-1 mt-2'>от 800 ₽</div>
+                                                    <div className='btn-1 fw-4 px-2 py-1 mt-2'>от 800 ₽</div>
                                                 </div>
                                             </label>
                                         </Col>
@@ -114,7 +114,7 @@ export default function Delivery(props) {
                                                 <div className='box'>
                                                     <GrDeliver className='fs-40'/>
                                                     <span className='fs-11 fw-7 mt-2'>До 500 кг</span>
-                                                    <div className='btn btn-1 fw-4 px-2 py-1 mt-2'>от 1300 ₽</div>
+                                                    <div className='btn-1 fw-4 px-2 py-1 mt-2'>от 1300 ₽</div>
                                                 </div>
                                             </label>
                                         </Col>
@@ -124,7 +124,7 @@ export default function Delivery(props) {
                                                 <div className='box'>
                                                     <GrDeliver className='fs-40'/>
                                                     <span className='fs-11 fw-7 mt-2'>До 1000 кг</span>
-                                                    <div className='btn btn-1 fw-4 px-2 py-1 mt-2'>от 1800 ₽</div>
+                                                    <div className='btn-1 fw-4 px-2 py-1 mt-2'>от 1800 ₽</div>
                                                 </div>
                                             </label>
                                         </Col>
@@ -134,7 +134,7 @@ export default function Delivery(props) {
                                                 <div className='box'>
                                                     <GrDeliver className='fs-40'/>
                                                     <span className='fs-11 fw-7 mt-2'>До 5 кг</span>
-                                                    <div className='btn btn-1 fw-4 px-2 py-1 mt-2'>от 800 ₽</div>
+                                                    <div className='btn-1 fw-4 px-2 py-1 mt-2'>от 800 ₽</div>
                                                 </div>
                                             </label>
                                         </Col>
@@ -144,7 +144,7 @@ export default function Delivery(props) {
                                                 <div className='box'>
                                                     <GrDeliver className='fs-40'/>
                                                     <span className='fs-11 fw-7 mt-2'>До 500 кг</span>
-                                                    <div className='btn btn-1 fw-4 px-2 py-1 mt-2'>от 1300 ₽</div>
+                                                    <div className='btn-1 fw-4 px-2 py-1 mt-2'>от 1300 ₽</div>
                                                 </div>
                                             </label>
                                         </Col>
@@ -154,7 +154,7 @@ export default function Delivery(props) {
                                                 <div className='box'>
                                                     <GrDeliver className='fs-40'/>
                                                     <span className='fs-11 fw-7 mt-2'>До 1000 кг</span>
-                                                    <div className='btn btn-1 fw-4 px-2 py-1 mt-2'>от 1800 ₽</div>
+                                                    <div className='btn-1 fw-4 px-2 py-1 mt-2'>от 1800 ₽</div>
                                                 </div>
                                             </label>
                                         </Col>

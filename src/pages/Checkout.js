@@ -49,13 +49,13 @@ export default function Checkout(props) {
                         <h1 className='inner text-center'>Спасибо за заказ!</h1>
                         <p className='fs-13 text-center'>Ваш заказ был принят</p>
                         <p className='fs-13 text-center mt-3'>Номер заказа: <span className='fw-8 main-color'>123123</span></p>
-                            <Link to='/catalog' className='btn btn-1 fs-11 mx-auto mt-4 mt-sm-5'>
+                            <Link to='/catalog' className='btn-1 fs-11 mx-auto mt-4 mt-sm-5'>
                                 <span>Вернуться в каталог</span>
                             </Link>
                     </section>
                     : <section id="checkout" className='mb-6'>
                         <div className='d-flex align-items-center d-md-block mb-2 mb-sm-4 mb-md-0'>
-                            <Link to="/" className="btn btn-4 fs-11 px-3 mb-md-5">
+                            <Link to="/" className="btn-4 fs-11 px-3 mb-md-5">
                                 <VscArrowLeft className='fs-12'/>
                                 <span className='ms-2 d-none d-md-inline'>Назад на главную</span>
                             </Link>
@@ -186,11 +186,11 @@ export default function Checkout(props) {
                                             <div>Всего к оплате</div>
                                             <div>36 200 ₽</div>
                                         </div>
-                                        <button type='button' onClick={()=>setSucc(true)} className='order-4 btn btn-1 fs-11 w-100 px-4 mt-2'><span>Оформить заказ на 36 200 ₽</span></button>
+                                        <button type='button' onClick={()=>setSucc(true)} className='order-4 btn-1 fs-11 w-100 px-4 mt-2'><span>Оформить заказ на 36 200 ₽</span></button>
                                     </div>
                                 </Col>
                             </Row>
-                            <Link to='/cart' className='btn btn-3 fs-11 mt-4'>Назад в корзину</Link>
+                            <Link to='/cart' className='btn-3 fs-11 mt-4'>Назад в корзину</Link>
                         </form>
                     </section>
                 }

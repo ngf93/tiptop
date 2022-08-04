@@ -8,7 +8,7 @@ export default function AddToCart(props) {
         <div className='count'>
             {
                 (cart===0)&&
-                <button type='button' className='btn btn-1 w-100 fs-11' onClick={()=>setCart(cart+1)}><span>В корзину</span></button>
+                <button type='button' className='btn-1 w-100 fs-11' onClick={()=>setCart(cart+1)}><span>В корзину</span></button>
             }
             {
                 (cart>0)&&

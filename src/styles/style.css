@@ -237,7 +237,7 @@ button {
   color: inherit;
 }
 
-.btn {
+.btn, .btn-4, .btn-3, .btn-2, .btn-1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -331,7 +331,7 @@ button {
     border-radius: 5px;
   }
 }
-.btn:disabled {
+.btn:disabled, .btn-1:disabled, .btn-2:disabled, .btn-3:disabled, .btn-4:disabled {
   filter: grayscale(1);
   opacity: 0.75;
   pointer-events: none;
@@ -2730,7 +2730,7 @@ aside {
   margin-bottom: 1em;
 }
 @media (max-width: 767px) {
-  .address button.btn {
+  .address button.btn, .address button.btn-1, .address button.btn-2, .address button.btn-3, .address button.btn-4 {
     color: #fff;
     padding: 0.4em;
   }

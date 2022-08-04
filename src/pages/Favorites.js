@@ -14,9 +14,9 @@ export default function Favorites() {
 
                 <div className='d-md-flex align-items-center justify-content-between'>
                     <div className='d-none d-md-flex align-items-center'>
-                        <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 fw-4'><span>Новинки</span></button>
-                        <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 color-2 fw-4 ms-3 ms-xl-4'><span>Хиты</span></button>
-                        <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 color-3 fw-4 ms-3 ms-xl-4'><span>Распродажа</span></button>
+                        <button type='button' className='btn-1 px-2 px-sm-3 py-1 py-sm-2 fw-4'><span>Новинки</span></button>
+                        <button type='button' className='btn-1 px-2 px-sm-3 py-1 py-sm-2 color-2 fw-4 ms-3 ms-xl-4'><span>Хиты</span></button>
+                        <button type='button' className='btn-1 px-2 px-sm-3 py-1 py-sm-2 color-3 fw-4 ms-3 ms-xl-4'><span>Распродажа</span></button>
                     </div>
                     <div className='d-flex align-items-center justify-content-end'>
                         <select className='fs-11 fw-7' defaultValue={'val-5'}>

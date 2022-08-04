@@ -9,7 +9,7 @@ export default function UserProfile() {
             <Col xl={7}>
                 <div className='box-2 p-lg-4'>
                     <div className='d-flex align-items-center d-lg-none mb-3 mb-sm-4'>
-                        <Link to="/personal-account" className="btn btn-4 fs-11 px-2 px-sm-3">
+                        <Link to="/personal-account" className="btn-4 fs-11 px-2 px-sm-3">
                             <VscArrowLeft className='fs-12'/>
                         </Link>
                         <h1 className='inner mb-0 ms-2 ms-sm-4'>Личные данные</h1>
@@ -24,7 +24,7 @@ export default function UserProfile() {
                             <label htmlFor='phone' className='fs-13 fw-7 mb-2'>Номер телефона</label>
                             <input type='tel' id="phone" placeholder='Телефон' className='fs-11 fw-5'/>
                             <div className='fs-09 fw-5 mt-2'>Код подтверждения будет выслан Вам на новый номер телефона</div>
-                            <button type='button' className='btn btn-1 fs-09 mt-2'><span>Получить код</span></button>
+                            <button type='button' className='btn-1 fs-09 mt-2'><span>Получить код</span></button>
                         </div>
                         <div className='mb-3 mb-sm-4'>
                             <label htmlFor='email' className='fs-13 fw-7 mb-2'>Электронная почта</label>

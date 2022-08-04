@@ -254,6 +254,7 @@ button {
     line-height: normal;
     font-weight: 500;
     &-1 {
+        @extend .btn;
         background-color: $main-color;
         color: #fff;
         font-weight: 700;
@@ -291,6 +292,7 @@ button {
         }
     }
     &-2 {
+        @extend .btn;
         background: $sec-color;
         color: #fff;
         font-weight: 700;
@@ -303,6 +305,7 @@ button {
         }
     }
     &-3 {
+        @extend .btn;
         border-radius: 10px;
         border: 1px solid #959595;
         background: transparent;
@@ -316,6 +319,7 @@ button {
         }
     }
     &-4 {
+        @extend .btn;
         border-radius: 10px;
         border: 1px solid #F2F2F2;
         background: #F2F2F2;

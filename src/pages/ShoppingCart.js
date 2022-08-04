@@ -34,7 +34,7 @@ export default function ShoppingCart() {
             <Container>
                 <section className='mb-6'>
                     <div className='d-flex align-items-center d-md-block mb-3 mb-sm-4 mb-md-0'>
-                        <Link to="/" className="btn btn-4 fs-11 px-3 mb-md-5">
+                        <Link to="/" className="btn-4 fs-11 px-3 mb-md-5">
                             <VscArrowLeft className='fs-12'/>
                             <span className='ms-2 d-none d-md-inline'>Назад на главную</span>
                         </Link>
@@ -116,7 +116,7 @@ export default function ShoppingCart() {
                                         <div>Итого</div>
                                         <div>2 500 ₽</div>
                                     </div>
-                                    <Link to="/checkout" className='order-4 btn btn-1 fs-11 w-100 px-4 mt-2'><span>Перейти к оформлению</span></Link>
+                                    <Link to="/checkout" className='order-4 btn-1 fs-11 w-100 px-4 mt-2'><span>Перейти к оформлению</span></Link>
                                 </div>
                                 <aside className='d-none d-lg-block mt-4'></aside>
                                 <aside className='d-none d-lg-block mt-4'></aside>
@@ -125,7 +125,7 @@ export default function ShoppingCart() {
                         : <div className='d-flex flex-column align-items-center py-5'>
                             <h2 className='fs-20'>Ваша корзина ещё пуста</h2>
                             <p className='text-center fs-13 mb-4 mb-sm-5'>Воспользуйтесь поиском или перейдите в каталог, чтобы заполнить её товарами</p>
-                            <Link to='/catalog' className='btn btn-1 fs-13'>Перейти в каталог</Link>
+                            <Link to='/catalog' className='btn-1 fs-13'>Перейти в каталог</Link>
                         </div>
                     }
                 </section>

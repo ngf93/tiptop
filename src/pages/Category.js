@@ -122,15 +122,15 @@ export default function Category(props) {
                                     </label>
                                     <button type="button" className='light-gray'>Показать ещё 12</button>
                                 </fieldset>
-                                <button type="reset" className='btn btn-3 w-100'>Сбросить фильтры</button>
+                                <button type="reset" className='btn-3 w-100'>Сбросить фильтры</button>
                             </form>
                         </Col>
                         <Col lg={9}>
                             <div className='d-lg-flex align-items-center justify-content-between'>
                                 <div className='d-flex align-items-center'>
-                                    <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 fw-4'><span>Новинки</span></button>
-                                    <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 color-2 fw-4 ms-3 ms-xl-4'><span>Хиты</span></button>
-                                    <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 color-3 fw-4 ms-3 ms-xl-4'><span>Распродажа</span></button>
+                                    <button type='button' className='btn-1 px-2 px-sm-3 py-1 py-sm-2 fw-4'><span>Новинки</span></button>
+                                    <button type='button' className='btn-1 px-2 px-sm-3 py-1 py-sm-2 color-2 fw-4 ms-3 ms-xl-4'><span>Хиты</span></button>
+                                    <button type='button' className='btn-1 px-2 px-sm-3 py-1 py-sm-2 color-3 fw-4 ms-3 ms-xl-4'><span>Распродажа</span></button>
                                 </div>
                                 <div className='mt-4 mt-lg-0 d-flex align-items-center justify-content-end'>
                                     <select className='fs-11 fw-7' defaultValue={'val-5'}>
@@ -432,7 +432,7 @@ export default function Category(props) {
                             }
                         </section>
                         <div className='bottom'>
-                            <button type='submit' className='btn btn-1 fs-12 w-100'>
+                            <button type='submit' className='btn-1 fs-12 w-100'>
                                 <span>Готово</span>
                             </button>
                         </div>

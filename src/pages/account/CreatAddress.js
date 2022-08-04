@@ -7,7 +7,7 @@ export default function CreatAddress(props) {
     return (
         <>
             <div className='d-flex align-items-center mb-3 mb-sm-4'>
-                <Link to="/personal-account/addresses" className="btn btn-4 fs-11 px-2 px-sm-3">
+                <Link to="/personal-account/addresses" className="btn-4 fs-11 px-2 px-sm-3">
                     <VscArrowLeft className='fs-12'/>
                 </Link>
                 <h1 className='inner mb-0 ms-2 ms-sm-4'>Добавление адреса</h1>
@@ -49,7 +49,7 @@ export default function CreatAddress(props) {
                     <div className='fs-13 fw-7 mb-2'>Комментарий</div>
                     <textarea rows={5} placeholder='Комментарий' className='fs-11 fw-5'></textarea>
                 </div>
-                <button type='button' className='btn btn-1 fs-11'>
+                <button type='button' className='btn-1 fs-11'>
                     <span>Сохранить</span>
                 </button>
             </form>

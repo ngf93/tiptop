@@ -6,7 +6,7 @@ export default function Order(props) {
         <div className='order'>
             <div className='d-flex justify-content-between align-items-center'>
                 <h5 className='mb-0'><Link to="order">Заказ: {props.id}</Link></h5>
-                <button type='button' className='btn btn-1 py-2 px-2 px-sm-3'>
+                <button type='button' className='btn-1 py-2 px-2 px-sm-3'>
                     <FiRefreshCcw/>
                     <span className='ms-1'>Повторить заказ</span>
                 </button>

@@ -13,7 +13,7 @@ export default function Articles(props) {
             <Container className='mb-6'>
                 <section>
                     <div className='d-flex align-items-center d-md-block mb-3 mb-sm-4 mb-md-0'>
-                        <Link to="/" className="btn btn-4 fs-11 px-3 mb-md-5">
+                        <Link to="/" className="btn-4 fs-11 px-3 mb-md-5">
                             <VscArrowLeft className='fs-12'/>
                             <span className='ms-2 d-none d-md-inline'>Назад на главную</span>
                         </Link>

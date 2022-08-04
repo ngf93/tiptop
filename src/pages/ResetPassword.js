@@ -24,7 +24,7 @@ export default function ResetPassword(props) {
                                     <input type='tel' id="phone" placeholder='Телефон' className='fs-11 fw-5 mb-3 mb-sm-4'/>
                                     <Row className='justify-content-center'>
                                         <Col md={6}>
-                                            <button type='button' onClick={()=>setStep('2')} className='btn btn-1 fs-13 w-100'><span>Получить код</span></button>
+                                            <button type='button' onClick={()=>setStep('2')} className='btn-1 fs-13 w-100'><span>Получить код</span></button>
                                         </Col>
                                     </Row>
                                 </form>
@@ -37,10 +37,10 @@ export default function ResetPassword(props) {
                                     <input type='number' id="code" placeholder='Код подтверждения' className='fs-11 fw-5 mb-3 mb-sm-4'/>
                                     <Row className='gx-3 gx-lg-4'>
                                         <Col md={5}>
-                                            <button type='button' onClick={()=>setStep('3')} className='btn btn-1 fs-13 w-100'><span>Отправить</span></button>
+                                            <button type='button' onClick={()=>setStep('3')} className='btn-1 fs-13 w-100'><span>Отправить</span></button>
                                         </Col>
                                         <Col md={7}>
-                                            <button type='button' className='btn btn-3 fs-13 w-100 mt-2 mt-sm-3 mt-md-0'>Получить код ещё раз</button>
+                                            <button type='button' className='btn-3 fs-13 w-100 mt-2 mt-sm-3 mt-md-0'>Получить код ещё раз</button>
                                         </Col>
                                     </Row>
                                 </form>
@@ -59,7 +59,7 @@ export default function ResetPassword(props) {
                                     <InputPassword className="fs-11 fw-5 mb-3 mb-sm-4"/>
                                     <Row className='justify-content-center'>
                                         <Col md={6}>
-                                            <button type='button' onClick={()=>setStep('3')} className='btn btn-1 fs-13 w-100'><span>Сохранить</span></button>
+                                            <button type='button' onClick={()=>setStep('3')} className='btn-1 fs-13 w-100'><span>Сохранить</span></button>
                                         </Col>
                                     </Row>
                                 </form>

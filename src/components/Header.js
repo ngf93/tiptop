@@ -76,9 +76,9 @@ export default function Header() {
                     <Container>
                         <section ref={ref} className='menu'>
                             <div className='p-3 p-sm-4 fs-13 d-flex align-items-center'>
-                                <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 fw-4'><span>Новинки</span></button>
-                                <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 color-2 fw-4 ms-3 ms-sm-4'><span>Хиты</span></button>
-                                <button type='button' className='btn btn-1 px-2 px-sm-3 py-1 py-sm-2 color-3 fw-4 ms-3 ms-sm-4'><span>Распродажа</span></button>
+                                <button type='button' className='btn-1 px-2 px-sm-3 py-1 py-sm-2 fw-4'><span>Новинки</span></button>
+                                <button type='button' className='btn-1 px-2 px-sm-3 py-1 py-sm-2 color-2 fw-4 ms-3 ms-sm-4'><span>Хиты</span></button>
+                                <button type='button' className='btn-1 px-2 px-sm-3 py-1 py-sm-2 color-3 fw-4 ms-3 ms-sm-4'><span>Распродажа</span></button>
                             </div>
                             <hr className='m-0'/>
                             <nav className='p-3 p-sm-4'>

@@ -9,7 +9,7 @@ export default function BonusCard(props) {
     return (
         <div className='bonus-page'>
             <div className='d-flex align-items-center d-lg-none mb-3 mb-sm-4'>
-                <Link to="/personal-account" className="btn btn-4 fs-11 px-2 px-sm-3">
+                <Link to="/personal-account" className="btn-4 fs-11 px-2 px-sm-3">
                     <VscArrowLeft className='fs-12'/>
                 </Link>
                 <h1 className='inner mb-0 ms-2 ms-sm-4'>Бонусная карта</h1>
@@ -32,7 +32,7 @@ export default function BonusCard(props) {
                     </div>
                     <div className='box-3'>
                         <p className='fs-13'>Вы получаете бонусные рубли за покупки и можете их использовать при оплате </p>
-                        <Link to="/" className='btn btn-1 fw-4 fs-11 py-2 px-3 mt-2 '><span>Подробнее</span></Link>
+                        <Link to="/" className='btn-1 fw-4 fs-11 py-2 px-3 mt-2 '><span>Подробнее</span></Link>
                     </div>
                 </Col>
             </Row>
@@ -44,7 +44,7 @@ export default function BonusCard(props) {
             <div className='box-3 py-5'>
                 <h5 className='fs-20 text-center mb-4'>Нет операций</h5>
                 <p className='fs-13 text-center mb-4'>Вы получаете бонусные рубли <br/>за покупки и можете их <br/>использовать при оплате</p>
-                <Link to='/catalog' className='btn btn-1 mx-auto fs-13'><span>Перейти в каталог</span></Link>
+                <Link to='/catalog' className='btn-1 mx-auto fs-13'><span>Перейти в каталог</span></Link>
             </div>
             <div className='box-3 pb-sm-5'>
                 <BonusOperation id={'112030123012'} orderDate={'20.05.2022'} delivery={true} deliveryDate={'25.05.2022'} increase={true} bonus={'1259'}/>

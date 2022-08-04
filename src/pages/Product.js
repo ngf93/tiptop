@@ -197,7 +197,7 @@ export default function Product() {
                             <div className='content'>
                                 <Row className="flex-lg-row-reverse justify-content-between">
                                     <Col lg={3} className="mb-4 mb-sm-5 mb-lg-0">
-                                        <button type='button' className='btn btn-1 w-100 fs-11 mb-4 mb-sm-5'><span>Оставить отзыв</span></button>
+                                        <button type='button' className='btn-1 w-100 fs-11 mb-4 mb-sm-5'><span>Оставить отзыв</span></button>
 
                                         <div className='d-flex justify-content-between align-items-center mb-4'>
                                             <div className='rating'>

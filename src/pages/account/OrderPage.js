@@ -29,7 +29,7 @@ export default function OrderPage() {
     return (
         <div className='order-page'>
             <div className='d-flex align-items-center d-md-block mb-2 mb-sm-4 mb-md-4'>
-                <Link to="/personal-account/history" className="btn btn-4 fs-11 px-2 px-sm-3 mb-md-5">
+                <Link to="/personal-account/history" className="btn-4 fs-11 px-2 px-sm-3 mb-md-5">
                     <VscArrowLeft className='fs-12'/>
                     <span className='ms-2 d-none d-md-inline'>Назад в историю покупок</span>
                 </Link>
@@ -97,7 +97,7 @@ export default function OrderPage() {
                             <div>Итого</div>
                             <div>2 500 ₽</div>
                         </div>
-                        <Link to="/checkout" className='order-4 btn btn-1 fs-11 w-100 px-4 mt-2'><FiRefreshCcw/><span className='ms-2'>Повторить заказ</span></Link>
+                        <Link to="/checkout" className='order-4 btn-1 fs-11 w-100 px-4 mt-2'><FiRefreshCcw/><span className='ms-2'>Повторить заказ</span></Link>
                     </div>
                     <aside className='d-none d-lg-block mt-4'></aside>
                     <aside className='d-none d-lg-block mt-4'></aside>

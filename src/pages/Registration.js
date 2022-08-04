@@ -17,7 +17,7 @@ export default function Registration() {
                         (succ)
                         ? <div>
                             <p className='fs-13 text-center'>Ваш аккаунт был успешно создан!</p>
-                            <Link to='/catalog' className='btn btn-1 fs-11 mx-auto mt-4 mt-sm-5'>
+                            <Link to='/catalog' className='btn-1 fs-11 mx-auto mt-4 mt-sm-5'>
                                 <span>Перейти в каталог</span>
                             </Link>
                         </div>
@@ -46,7 +46,7 @@ export default function Registration() {
                                         <div className='ms-2'>Я согласен на обработку персональных данных</div>
                                     </label>
 
-                                    <button type='button' onClick={()=>setSucc(true)} className='btn btn-1 mx-sm-auto fs-13 mt-3'><span>Зарегестрироваться</span></button>
+                                    <button type='button' onClick={()=>setSucc(true)} className='btn-1 mx-sm-auto fs-13 mt-3'><span>Зарегестрироваться</span></button>
 
                                     <div className='mt-3 text-sm-center gray fw-5 fs-11'>У вас уже есть аккаунт? <Link to='/login' className='d-inline link td-under'>Войти</Link></div>
                                 </form>

@@ -11,7 +11,7 @@ export default function Contacts() {
         <main>
             <Container id="contacts-page" className='mb-6'>
                 <div className='d-flex align-items-center d-md-block mb-2 mb-sm-4 mb-md-0'>
-                    <Link to="/" className="btn btn-4 fs-11 px-3 mb-md-5">
+                    <Link to="/" className="btn-4 fs-11 px-3 mb-md-5">
                         <VscArrowLeft className='fs-12'/>
                         <span className='ms-2 d-none d-md-inline'>Назад на главную</span>
                     </Link>
@@ -25,7 +25,7 @@ export default function Contacts() {
                                     <h5 className='fs-15'>Отзывы о магазине</h5>
                                     <p className='fs-13'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet libero facilisi dictum ac lectus aliquam, aliquet.</p>
                                     <p className='fs-13 mt-3'>Quam sit amet turpis volutpat elementum. Sed consectetur aliquet fermentum pretium.</p>
-                                    <button type='button' className='btn btn-1 fs-11 mt-3 mt-sm-4'>Оставить отзыв</button>
+                                    <button type='button' className='btn-1 fs-11 mt-3 mt-sm-4'>Оставить отзыв</button>
                                 </div>
                             </Col>
                             <Col>
