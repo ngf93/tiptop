@@ -6,7 +6,7 @@ export default function ProductCard(props) {
     return (
         <div className='product-card'>
             <div className='position-relative mb-2 mb-sm-4'>
-                <Link to="/product"><img src="imgs/img2.png"/></Link>
+                <Link to={props.link}><img src="imgs/img2.png"/></Link>
                 <div className='top-left'>
                     {
                         (props.code) &&
@@ -23,7 +23,7 @@ export default function ProductCard(props) {
                     <div className='bonus'>До {props.bonus} % бонусами</div>
                 }
             </div>
-            <h5 className='fw-4 mb-1 mb-sm-2'><Link to="/product">{props.title}</Link></h5>
+            <h5 className='fw-4 mb-1 mb-sm-2'><Link to={props.link}>{props.title}</Link></h5>
             <div className='d-flex align-items-baseline mb-2 mb-md-4 mb-xxl-5'>
                 {
                     (props.discount) ?

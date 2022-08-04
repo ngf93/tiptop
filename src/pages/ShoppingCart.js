@@ -108,7 +108,7 @@ export default function ShoppingCart() {
                                         <div>Итого</div>
                                         <div>2 500 ₽</div>
                                     </div>
-                                    <Link to="/checkout" className='order-4 btn-1 fs-11 w-100 px-4 mt-2'><span>Перейти к оформлению</span></Link>
+                                    <Link to="checkout" className='order-4 btn-1 fs-11 w-100 px-4 mt-2'><span>Перейти к оформлению</span></Link>
                                 </div>
                                 <aside className='d-none d-lg-block mt-4'></aside>
                                 <aside className='d-none d-lg-block mt-4'></aside>

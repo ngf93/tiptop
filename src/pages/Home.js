@@ -100,40 +100,40 @@ export default function Home() {
                     </div>
                     <Row xs={2} md={3} lg={4} className="g-2 g-sm-3 g-xl-4">
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                         <Col>
-                            <CategoryCard />
+                            <CategoryCard link={'catalog/category'}/>
                         </Col>
                     </Row>
                 </section>
@@ -159,40 +159,16 @@ export default function Home() {
                     </div>
                     <Row xs={2} md={3} lg={4} className="justify-content-center gy-4 gx-3 g-sm-5 g-md-4 g-xl-5">
                         <Col>
-                            <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                            <ProductCard link={'catalog/category/product'} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                         </Col>
                         <Col>
-                            <ProductCard code={'0001'} title={'Название товара'} price={'625,00'} fav={false} discount={'25'} bonus={'20'} />
+                            <ProductCard link={'catalog/category/product'} code={'0001'} title={'Название товара'} price={'625,00'} fav={false} discount={'25'} bonus={'20'} />
                         </Col>
                         <Col>
-                            <ProductCard code={''} title={'Название товара'} price={'625,00'} fav={false} discount={'5'} bonus={''}/>
+                            <ProductCard link={'catalog/category/product'} code={''} title={'Название товара'} price={'625,00'} fav={false} discount={'5'} bonus={''}/>
                         </Col>
                         <Col>
-                            <ProductCard code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
-                        </Col>
-                    </Row>
-                </section>
-
-                <section className='mb-6'>
-                    <div className='d-flex justify-content-between mb-4 mb-sm-5'>
-                        <h2 className='mb-0'>Сезонные товары</h2>
-                        <a href='/' className='link'>
-                            <span className='me-1'>Смотреть все</span>
-                            <IoChevronForward/>
-                        </a>
-                    </div>
-                    <Row xs={2} md={3} lg={4} className="justify-content-center gy-4 gx-3 g-sm-5 g-md-4 g-xl-5">
-                        <Col>
-                            <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
-                        </Col>
-                        <Col>
-                            <ProductCard code={'0001'} title={'Название товара'} price={'625,00'} fav={false} discount={'25'} bonus={'20'} />
-                        </Col>
-                        <Col>
-                            <ProductCard code={''} title={'Название товара'} price={'625,00'} fav={false} discount={'5'} bonus={''}/>
-                        </Col>
-                        <Col>
-                            <ProductCard code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
+                            <ProductCard link={'catalog/category/product'} code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
                         </Col>
                     </Row>
                 </section>
@@ -207,16 +183,40 @@ export default function Home() {
                     </div>
                     <Row xs={2} md={3} lg={4} className="justify-content-center gy-4 gx-3 g-sm-5 g-md-4 g-xl-5">
                         <Col>
-                            <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                            <ProductCard link={'catalog/category/product'} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                         </Col>
                         <Col>
-                            <ProductCard code={'0001'} title={'Название товара'} price={'625,00'} fav={false} discount={'25'} bonus={'20'} />
+                            <ProductCard link={'catalog/category/product'} code={'0001'} title={'Название товара'} price={'625,00'} fav={false} discount={'25'} bonus={'20'} />
                         </Col>
                         <Col>
-                            <ProductCard code={''} title={'Название товара'} price={'625,00'} fav={false} discount={'5'} bonus={''}/>
+                            <ProductCard link={'catalog/category/product'} code={''} title={'Название товара'} price={'625,00'} fav={false} discount={'5'} bonus={''}/>
                         </Col>
                         <Col>
-                            <ProductCard code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
+                            <ProductCard link={'catalog/category/product'} code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
+                        </Col>
+                    </Row>
+                </section>
+
+                <section className='mb-6'>
+                    <div className='d-flex justify-content-between mb-4 mb-sm-5'>
+                        <h2 className='mb-0'>Сезонные товары</h2>
+                        <a href='/' className='link'>
+                            <span className='me-1'>Смотреть все</span>
+                            <IoChevronForward/>
+                        </a>
+                    </div>
+                    <Row xs={2} md={3} lg={4} className="justify-content-center gy-4 gx-3 g-sm-5 g-md-4 g-xl-5">
+                        <Col>
+                            <ProductCard link={'catalog/category/product'} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        </Col>
+                        <Col>
+                            <ProductCard link={'catalog/category/product'} code={'0001'} title={'Название товара'} price={'625,00'} fav={false} discount={'25'} bonus={'20'} />
+                        </Col>
+                        <Col>
+                            <ProductCard link={'catalog/category/product'} code={''} title={'Название товара'} price={'625,00'} fav={false} discount={'5'} bonus={''}/>
+                        </Col>
+                        <Col>
+                            <ProductCard link={'catalog/category/product'} code={'9494'} title={'Название товара'} price={'625,00'} fav={true} bonus={'10'}/>
                         </Col>
                     </Row>
                 </section>
@@ -234,7 +234,7 @@ export default function Home() {
                 <section className='mb-6'>
                     <div className='d-flex justify-content-between mb-4 mb-sm-5'>
                         <h2 className='mb-0'>Статьи и советы</h2>
-                        <Link to='/articles' className='link'>
+                        <Link to='articles' className='link'>
                             <span className='me-1'>Смотреть все</span>
                             <IoChevronForward/>
                         </Link>

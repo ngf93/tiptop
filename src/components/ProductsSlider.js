@@ -31,28 +31,28 @@ export default function ProductsSlider(props) {
                     }}
                 >
                     <SwiperSlide>
-                        <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        <ProductCard link={''} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        <ProductCard link={''} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        <ProductCard link={''} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        <ProductCard link={''} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        <ProductCard link={''} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        <ProductCard link={''} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        <ProductCard link={''} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <ProductCard code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
+                        <ProductCard link={''} code={'25678'} title={'Название товара'} price={'625,00'} fav={true} discount={'45'} bonus={'20'} />
                     </SwiperSlide>
                 </Swiper>
             </div>

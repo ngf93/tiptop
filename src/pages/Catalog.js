@@ -12,58 +12,58 @@ export default function Catalog() {
                 
                 <Row xs={2} md={3} lg={4} className="g-2 g-sm-3 g-xl-4">
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                     <Col>
-                        <CategoryCard />
+                        <CategoryCard link={'category'}/>
                     </Col>
                 </Row>
             </Container>
