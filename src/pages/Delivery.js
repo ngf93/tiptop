@@ -1,28 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import { VscArrowLeft } from "react-icons/vsc";
 import { GrDeliver } from "react-icons/gr";
+import useIsMobile from '../hooks/isMobile';
 
-export default function Delivery(props) {
-    const [mobile, setMobile] = useState(false);
+export default function Delivery() {
     const [map, setMap] = useState(false);
-
-    useEffect(() => {
-        function updateView() {
-            if (window.matchMedia("(max-width: 991px)").matches) {
-                setMobile(true);
-            } else {
-                setMobile(false);
-            }
-        }
-
-        window.addEventListener('resize', updateView);
-        updateView();
-        return () => window.removeEventListener('resize', updateView);
-    }, []);
+    const {mobile} = useIsMobile();
 
     return (
         <main>
@@ -44,8 +31,8 @@ export default function Delivery(props) {
             
             <section id="delivery-map" className='mb-4 mb-sm-5'>
                 <Container className='btns'>
-                    <button type='button' class={(map === false) && 'active'} onClick={()=>setMap(false)}>Параметры доставки</button>
-                    <button type='button' class={(map === true) && 'active'} onClick={()=>setMap(true)}>Зоны доставки</button>
+                    <button type='button' className={(map === false)?'active':''} onClick={()=>setMap(false)}>Параметры доставки</button>
+                    <button type='button' className={(map === true)?'active':''} onClick={()=>setMap(true)}>Зоны доставки</button>
                 </Container>
                 {
                     (mobile === false || map === true) &&

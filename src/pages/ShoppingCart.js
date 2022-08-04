@@ -8,26 +8,18 @@ import ProductsSlider from '../components/ProductsSlider';
 import Pagination from '../components/Pagination';
 import CartItem from '../components/CartItem';
 
+import useIsMobile from '../hooks/isMobile';
+
 export default function ShoppingCart() {
     const [count, setCount] = useState(2);
-    const [mobile, setMobile] = useState(false);
     const [full, setFull] = useState(true);
+    const {mobile} = useIsMobile();
 
     useEffect(() => {
-        function updateView() {
-            if (window.matchMedia("(max-width: 991px)").matches) {
-                setMobile(true);
-                setFull(false);
-            } else {
-                setMobile(false);
-                setFull(true);
-            }
-        }
-
-        window.addEventListener('resize', updateView);
-        updateView();
-        return () => window.removeEventListener('resize', updateView);
-    }, []);
+        if (mobile===true) {
+            setFull(false);
+        }  else {setFull(true);}
+    }, [mobile]);
 
     return (
         <main className='total-padding'>

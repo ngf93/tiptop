@@ -5,26 +5,17 @@ import { Link } from 'react-router-dom';
 import { VscArrowLeft, VscChevronDown, VscChevronUp } from "react-icons/vsc";
 import OrderItem from '../../components/OrderItem';
 import { FiRefreshCcw } from "react-icons/fi";
+import useIsMobile from '../../hooks/isMobile';
 
 export default function OrderPage() {
-    const [mobile, setMobile] = useState(false);
     const [full, setFull] = useState(true);
+    const {mobile} = useIsMobile();
 
     useEffect(() => {
-        function updateView() {
-            if (window.matchMedia("(max-width: 991px)").matches) {
-                setMobile(true);
-                setFull(false);
-            } else {
-                setMobile(false);
-                setFull(true);
-            }
-        }
-
-        window.addEventListener('resize', updateView);
-        updateView();
-        return () => window.removeEventListener('resize', updateView);
-    }, []);
+        if (mobile===true) {
+            setFull(false);
+        }  else {setFull(true);}
+    }, [mobile]);
 
     return (
         <div className='order-page'>

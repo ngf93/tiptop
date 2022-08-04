@@ -6,27 +6,18 @@ import { Link } from 'react-router-dom';
 import { VscArrowLeft, VscChevronDown, VscChevronUp } from "react-icons/vsc";
 
 import Slider from 'rc-slider';
+import useIsMobile from '../hooks/isMobile';
 
-export default function Checkout(props) {
-    const [mobile, setMobile] = useState(false);
+export default function Checkout() {
     const [full, setFull] = useState(true);
     const [succ, setSucc] = useState(false);
+    const {mobile} = useIsMobile();
 
     useEffect(() => {
-        function updateView() {
-            if (window.matchMedia("(max-width: 991px)").matches) {
-                setMobile(true);
-                setFull(false);
-            } else {
-                setMobile(false);
-                setFull(true);
-            }
-        }
-    
-        window.addEventListener('resize', updateView);
-        updateView();
-        return () => window.removeEventListener('resize', updateView);
-    }, []);
+        if (mobile===true) {
+            setFull(false);
+        }  else {setFull(true);}
+    }, [mobile]);
 
     const bonusMax = 1000;
     const [bonusVal, setBonusVal] = useState(0);
