@@ -565,6 +565,7 @@ h6 {
   box-shadow: 0px 0px 2px #000000;
 }
 .box-2 {
+  background: #FFF;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 }
@@ -1505,7 +1506,7 @@ main {
   margin-left: 1em;
 }
 .product-full .characteristics {
-  background: #FFFFFF;
+  background: #FFF;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 2em;
@@ -2469,10 +2470,10 @@ article.full p {
 }
 
 .total {
-  background-color: #F2F2F2;
-  padding: 1.5em;
+  background: #F2F2F2;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  padding: 1.5em;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -2735,6 +2736,98 @@ aside {
   }
 }
 
+.bonus-page .box-3 {
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 2em;
+}
+@media (max-width: 767px) {
+  .bonus-page .box-3 {
+    padding: 1.5em;
+  }
+}
+.bonus-card {
+  background: #FBBA00;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 2em;
+  height: 250px;
+  position: relative;
+}
+@media (max-width: 1399px) {
+  .bonus-card {
+    height: 225px;
+  }
+}
+@media (max-width: 1199px) {
+  .bonus-card {
+    height: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .bonus-card {
+    height: 180px;
+  }
+}
+.bonus-card > * {
+  z-index: 1;
+}
+.bonus-card .logo {
+  position: absolute;
+  bottom: 1.5em;
+  right: 2em;
+  height: 55px;
+  width: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 10;
+}
+@media (max-width: 1399px) {
+  .bonus-card .logo {
+    bottom: 1em;
+    height: 40px;
+    width: 100px;
+  }
+}
+.bonus-operation {
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid #DADADA;
+  margin-bottom: 1.5em;
+}
+@media (max-width: 767px) {
+  .bonus-operation {
+    border-bottom: 1px solid #DADADA;
+  }
+}
+.bonus-tabs {
+  display: flex;
+  align-items: center;
+}
+.bonus-tabs button {
+  font-size: 1.3em;
+  color: #959595;
+  font-weight: 500;
+  border-right: 2px solid #DADADA;
+  padding-right: 2em;
+}
+.bonus-tabs button:not(:first-child) {
+  margin-left: 2em;
+}
+@media (max-width: 575px) {
+  .bonus-tabs button:not(:first-child) {
+    margin-left: 1em;
+  }
+}
+.bonus-tabs button.active {
+  color: #FBBA00;
+}
+@media (max-width: 575px) {
+  .bonus-tabs button {
+    padding-right: 1em;
+  }
+}
+
 footer {
   height: 500px;
   background-color: #0F0F0F;
@@ -2751,6 +2844,7 @@ footer {
     height: 50px;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
     padding: 0;
     position: fixed;
     bottom: 0px;

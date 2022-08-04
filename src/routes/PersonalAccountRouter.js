@@ -8,6 +8,7 @@ import OrderPage from '../pages/account/OrderPage';
 import Addresses from '../pages/account/Addresses';
 import CreatAddress from '../pages/account/CreatAddress';
 import EditAddress from '../pages/account/EditAddress';
+import BonusCard from '../pages/account/BonusCard';
 
 const PersonalAccountRouter = ({isMobile}) => {
     return (
@@ -22,7 +23,7 @@ const PersonalAccountRouter = ({isMobile}) => {
                 <Route path="addresses" element={<Addresses/>}/>
                 <Route path="addresses/add" element={<CreatAddress />}/>
                 <Route path="addresses/edit" element={<EditAddress />}/>
-                <Route path="bonus-card" element={<UserProfile/>}/>
+                <Route path="bonus-card" element={<BonusCard/>}/>
             </Route>
             <Route path="history/order" element={<OrderPage/>}/>
         </Routes>
