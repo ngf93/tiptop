@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { VscArrowLeft } from "react-icons/vsc";
 import Order from '../../components/Order';
-import Pagination from '../../components/Pagination';
+import NavPagination from '../../components/NavPagination';
 
 export default function PurchaseHistory() {
     return (
@@ -24,7 +24,7 @@ export default function PurchaseHistory() {
             <Order id={'112030123012'} count={'4'} price={'10560'} date={'30.03.2022'} time={'20:32'} status={'0'}/>
             <Order id={'112030123012'} count={'4'} price={'10560'} date={'30.03.2022'} time={'20:32'} status={'1'}/>
             <Order id={'112030123012'} count={'4'} price={'10560'} date={'30.03.2022'} time={'20:32'} status={'0'}/>
-            <Pagination />
+            <NavPagination />
         </div>
     )
 }

@@ -3,23 +3,27 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Thumbs, FreeMode } from 'swiper';
-import 'swiper/css';
-
-import { IoStarOutline, IoStar, IoStarHalf } from "react-icons/io5";
 import BtnFav from '../components/utils/BtnFav';
 import AddToCart from '../components/utils/AddToCart';
 import Review from '../components/Review';
-import Pagination from '../components/Pagination';
+import NavPagination from '../components/NavPagination';
 import ProductsSlider from '../components/ProductsSlider';
 import Breadcrumbs from '../components/utils/Breadcrumbs';
+import { IoStarOutline, IoStar, IoStarHalf } from "react-icons/io5";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import "swiper/css/free-mode";
+import "swiper/css/thumbs";
+import 'swiper/css/pagination';
+
+import { Thumbs, FreeMode, Pagination } from 'swiper';
 
 export default function Product() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [tab, setTab] = useState('1');
-
+    
     return (
         <main>
             <Container>
@@ -29,14 +33,15 @@ export default function Product() {
                     <Row lg={2} className="mb-4 mb-sm-5">
                         <Col className='images'>
                             <Swiper
-                                className='thumbslides'
                                 direction="vertical"
-                                spaceBetween={10}
+                                loop={true}
+                                spaceBetween={20}
                                 slidesPerView={'auto'}
-                                modules={[Thumbs, FreeMode]}
-                                watchSlidesProgress
-                                slideToClickedSlide
-                                onSwiper={() => setThumbsSwiper()}
+                                freeMode={true}
+                                watchSlidesProgress={true}
+                                modules={[FreeMode, Thumbs]}
+                                className="thumbslides"
+                                onSwiper={setThumbsSwiper}
                             >
                                 <SwiperSlide>
                                     <img src="imgs/product/1.png" alt="название товара"/>
@@ -52,11 +57,17 @@ export default function Product() {
                                 </SwiperSlide>
                             </Swiper>
                             <Swiper
-                                className='main'
+                                loop={true}
                                 spaceBetween={20}
-                                slidesPerView={1}
-                                modules={[Thumbs]} 
-                                thumbs={{ swiper: thumbsSwiper }}
+                                thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+                                modules={[FreeMode, Thumbs, Pagination]}
+                                pagination={{ clickable: true }}
+                                className="main"
+                                breakpoints={{
+                                    768: {
+                                        pagination: false
+                                    },
+                                }}
                             >
                                 <SwiperSlide>
                                     <img src="imgs/product/1.png" alt="название товара"/>
@@ -71,6 +82,7 @@ export default function Product() {
                                     <img src="imgs/product/4.png" alt="название товара"/>
                                 </SwiperSlide>
                             </Swiper>
+                            
                         </Col>
                         <Col>
                             <div className='fw-6 mb-2 mb-sm-4'><span className='gray'>Код:</span> 25678</div>
@@ -238,7 +250,7 @@ export default function Product() {
                                         <Review rating={'4'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'} author={'pochtausera@pochta.pochta'} date={'10 апреля 2022'} />
                                         <Review rating={'4'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '} author={'pochtausera@pochta.pochta'} date={'10 апреля 2022'} />
                                         
-                                        <Pagination/>
+                                        <NavPagination/>
                                     </Col>
                                 </Row>
                             </div>

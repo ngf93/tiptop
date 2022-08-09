@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import ProductCard from '../components/ProductCard';
-import Pagination from '../components/Pagination';
+import NavPagination from '../components/NavPagination';
 
 export default function Favorites() {
     return (
@@ -74,7 +74,7 @@ export default function Favorites() {
                     </Col>
                 </Row>
 
-                <Pagination />
+                <NavPagination />
             </Container>
         </main>
     );

@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import { VscArrowLeft } from "react-icons/vsc";
 import ArticlePreview from '../components/ArticlePreview';
-import Pagination from '../components/Pagination';
+import NavPagination from '../components/NavPagination';
 
 export default function Articles(props) {
     return (
@@ -59,7 +59,7 @@ export default function Articles(props) {
                         </Col>
                     </Row>
 
-                    <Pagination />
+                    <NavPagination />
                 </section>
             </Container>
         </main>

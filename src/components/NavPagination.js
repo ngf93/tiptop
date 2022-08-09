@@ -1,6 +1,6 @@
 import { FiChevronRight } from "react-icons/fi";
 
-export default function Pagination(props) {
+export default function NavPagination(props) {
     return (
         <nav className='pagination mt-4 mt-sm-5'>
             <ul>

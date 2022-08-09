@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import ProductCard from '../components/ProductCard';
-import Pagination from '../components/Pagination';
+import NavPagination from '../components/NavPagination';
 
 import Range from 'rc-slider';
 
@@ -185,7 +185,7 @@ export default function Category(props) {
                                 </Col>
                             </Row>
 
-                            <Pagination />
+                            <NavPagination />
                         </Col>
                     </Row>
                 </Container>

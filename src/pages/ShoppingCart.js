@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import { VscArrowLeft, VscChevronDown, VscChevronUp } from "react-icons/vsc";
 import ProductsSlider from '../components/ProductsSlider';
-import Pagination from '../components/Pagination';
+import NavPagination from '../components/NavPagination';
 import CartItem from '../components/CartItem';
 
 import useIsMobile from '../hooks/isMobile';
@@ -66,7 +66,7 @@ export default function ShoppingCart() {
                                 <CartItem />
                                 <CartItem />
 
-                                <Pagination/>
+                                <NavPagination/>
                             </Col>
                             <Col lg={4} xxl={3}>
                                 <div className='total'>

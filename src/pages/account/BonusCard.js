@@ -2,7 +2,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import { VscArrowLeft } from "react-icons/vsc";
-import Pagination from '../../components/Pagination';
+import NavPagination from '../../components/NavPagination';
 import BonusOperation from '../../components/BonusOperation';
 
 export default function BonusCard(props) {
@@ -51,7 +51,7 @@ export default function BonusCard(props) {
                 <BonusOperation id={'112030123012'} orderDate={'20.05.2022'} delivery={true} deliveryDate={'25.05.2022'} increase={false} bonus={'1259'}/>
                 <BonusOperation id={'112030123012'} orderDate={'20.05.2022'} delivery={false} deliveryDate={'25.05.2022'} increase={true} bonus={'1259'}/>
                 <BonusOperation id={'112030123012'} orderDate={'20.05.2022'} delivery={true} deliveryDate={'25.05.2022'} increase={false} bonus={'1259'}/>
-                <Pagination />
+                <NavPagination />
             </div>
         </div>
     );

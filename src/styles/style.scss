@@ -531,7 +531,7 @@ h6 {
         height: 10px;
         background: #B6B6B6;
         opacity: 1;
-        &-active {background:#FFFFFF;}
+        &-active {background: $main-color;}
     }
     &-button-next, &-button-prev {
         background-color: #fff;
@@ -1186,8 +1186,9 @@ main {
             margin-bottom: 3em;
         }
         .thumbslides {
-            width: var(--height);
-            height: calc((var(--height) + 10px)*3);
+            padding: .5em;
+            width: calc(var(--height) + 1em);
+            height: calc((var(--height) + 20px)*3);
             @media (max-width: 575px){
                 display: none;
             }
@@ -1197,6 +1198,14 @@ main {
                     width: 100%;
                     height: var(--height);
                     object-fit: contain;
+                    border-radius: 10px;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+                    transition: $transition;
+                }
+                &-thumb-active {
+                    img {
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                    }
                 }
             }
         }
