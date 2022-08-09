@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tiptop/static/css/main.f4181547.css",
-    "main.js": "/tiptop/static/js/main.cffc4610.js",
+    "main.css": "/tiptop/static/css/main.109ea069.css",
+    "main.js": "/tiptop/static/js/main.b38f290e.js",
     "static/media/FuturaPT-DemiObl.eot": "/tiptop/static/media/FuturaPT-DemiObl.bfa63d8ea789461db8fa.eot",
     "static/media/FuturaPT-LightObl.eot": "/tiptop/static/media/FuturaPT-LightObl.3b2c0fd0bc086ca1ffff.eot",
     "static/media/FuturaPT-DemiObl.ttf": "/tiptop/static/media/FuturaPT-DemiObl.81bcbf3e6b14134bdfe5.ttf",
@@ -72,11 +72,11 @@
     "index.html": "/tiptop/index.html",
     "static/media/mark.svg": "/tiptop/static/media/mark.e275d0a4fbc6ed9bad68.svg",
     "static/media/chevron-down.svg": "/tiptop/static/media/chevron-down.43a4a046a0b5f045f28e.svg",
-    "main.f4181547.css.map": "/tiptop/static/css/main.f4181547.css.map",
-    "main.cffc4610.js.map": "/tiptop/static/js/main.cffc4610.js.map"
+    "main.109ea069.css.map": "/tiptop/static/css/main.109ea069.css.map",
+    "main.b38f290e.js.map": "/tiptop/static/js/main.b38f290e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4181547.css",
-    "static/js/main.cffc4610.js"
+    "static/css/main.109ea069.css",
+    "static/js/main.b38f290e.js"
   ]
 }
