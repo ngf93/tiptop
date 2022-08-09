@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 export default function OrderItem(props) {
     return (
         <div className='order-item'>
-           <Link to="/product"><img src="imgs/img5.png"/></Link>
+           <Link to="/product"><img src="imgs/img5.png" alt='Назавние товара'/></Link>
            <div className='info'>
             <div className='fs-09 fw-6 mb-2 mb-xl-3'><span className='gray'>Код:</span> 25678</div>
             <Row className="gx-3 gx-xxl-4">
@@ -14,7 +14,7 @@ export default function OrderItem(props) {
                     <div className='gray mb-2 mb-xl-3 mb-xxl-4'>Производитель</div>
                     <div className='mb-2 mb-xl-3 mb-xxl-4'>Вес 500 г</div>
                     <div className='d-flex align-items-baseline'>
-                        <span class="fs-14 fw-6">625</span>
+                        <span className="fs-14 fw-6">625</span>
                         <span className='fs-11 ms-1'>₽,</span>
                         <span className='ms-3'>4 шт.</span>
                     </div>

@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import { VscArrowLeft } from "react-icons/vsc";
-import { FiPhone, FiMapPin, FiClock, FiMail, FiChevronDown } from "react-icons/fi";
+import { FiPhone, FiMapPin, FiClock, FiMail } from "react-icons/fi";
 
 export default function Contacts() {
     return (
@@ -25,7 +25,7 @@ export default function Contacts() {
                                     <h5 className='fs-15'>Отзывы о магазине</h5>
                                     <p className='fs-13'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet libero facilisi dictum ac lectus aliquam, aliquet.</p>
                                     <p className='fs-13 mt-3'>Quam sit amet turpis volutpat elementum. Sed consectetur aliquet fermentum pretium.</p>
-                                    <button type='button' className='btn-1 fs-11 mt-3 mt-sm-4'>Оставить отзыв</button>
+                                    <button type='button' className='btn-1 fs-11 mt-3 mt-sm-4'><span>Оставить отзыв</span></button>
                                 </div>
                             </Col>
                             <Col>
@@ -76,7 +76,7 @@ export default function Contacts() {
                                 </div>
                             </div>
                             <div className='map'>
-                                <img src="imgs/map.png"/>
+                                <img src="imgs/map.png" alt='map'/>
                             </div>
                         </div>
                         <div className='box shop mt-3 mt-sm-4 mt-lg-5'>
@@ -111,7 +111,7 @@ export default function Contacts() {
                                 </div>
                             </div>
                             <div className='map'>
-                                <img src="imgs/map.png"/>
+                                <img src="imgs/map.png" alt='map'/>
                             </div>
                         </div>
                     </Col>

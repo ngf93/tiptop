@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
-import { VscArrowLeft, VscChevronDown, VscChevronUp } from "react-icons/vsc";
+import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
 
 import Slider from 'rc-slider';
 import useIsMobile from '../hooks/isMobile';

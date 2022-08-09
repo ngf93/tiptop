@@ -11,9 +11,9 @@ import CartItem from '../components/CartItem';
 import useIsMobile from '../hooks/isMobile';
 
 export default function ShoppingCart() {
-    const [count, setCount] = useState(2);
     const [full, setFull] = useState(true);
     const {mobile} = useIsMobile();
+    const count = 2;
 
     useEffect(() => {
         if (mobile===true) {

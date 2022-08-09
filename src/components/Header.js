@@ -55,10 +55,10 @@ export default function Header() {
                         <ul className='list-unstyled'>
                             <li><NavLink to="/catalog" onMouseEnter={()=>meHandler()} onMouseLeave={()=>mlHandler()}><span>Каталог</span></NavLink></li>
                             <li><NavLink to="/search"><span>Поиск</span></NavLink></li>
-                            <li><a href=""><span>О нас</span></a></li>
+                            <li><NavLink to="/"><span>О нас</span></NavLink></li>
                         </ul>
                         <Link to='/' className='logo'>
-                            <img src="imgs/logo-top.svg" />
+                            <img src="imgs/logo-top.svg" alt='Тип-топ'/>
                         </Link>
                         <button type='button' className='menu' onClick={()=>setMobileMenu((mobileMenu===true) ? false : true)}><FiMenu/></button>
                         <ul className='list-unstyled'>
@@ -134,7 +134,7 @@ export default function Header() {
                 (catalogMenu)&&
                 <div id="catalogMenu" onMouseEnter={()=>meHandler()}>
                     <Container onMouseLeave={()=>mlHandler()}>
-                        <div class="level-1">
+                        <div className="level-1">
                             <h5>Каталог</h5>
                             <ul>
                                 <li>
@@ -195,7 +195,7 @@ export default function Header() {
                                 </li>
                             </ul>
                         </div>
-                        <div class="level-2">
+                        <div className="level-2">
                             <ul>
                                 <li>
                                     <Link to='/catalog/category'>
@@ -247,7 +247,7 @@ export default function Header() {
                                 </li>
                             </ul>
                         </div>
-                        <div class="level-3">
+                        <div className="level-3">
                             <ul>
                                 <li>
                                     <Link to='/catalog/category'>
@@ -299,7 +299,7 @@ export default function Header() {
                                 </li>
                             </ul>
                         </div>
-                        <div class="level-4">
+                        <div className="level-4">
                             <Row xs={2} className="g-3 g-xl-4">
                                 <Col>
                                     <Link to='/catalog/category' className='brand'>

@@ -6,7 +6,7 @@ export default function ProductCard(props) {
     return (
         <div className='product-card'>
             <div className='position-relative mb-2 mb-sm-4'>
-                <Link to={props.link}><img src="imgs/img2.png"/></Link>
+                <Link to={props.link}><img src="imgs/img2.png" alt={props.title}/></Link>
                 <div className='top-left'>
                     {
                         (props.code) &&

@@ -48,12 +48,12 @@ export default function Footer() {
                 </Row>
                 <hr className='my-5'/>
                 <div className='social'>
-                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
-                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
-                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
-                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
-                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
-                    <a href="/"><img src="imgs/icons/social-icon.png"/></a>
+                    <a href="/"><img src="imgs/icons/social-icon.png" alt='social'/></a>
+                    <a href="/"><img src="imgs/icons/social-icon.png" alt='social'/></a>
+                    <a href="/"><img src="imgs/icons/social-icon.png" alt='social'/></a>
+                    <a href="/"><img src="imgs/icons/social-icon.png" alt='social'/></a>
+                    <a href="/"><img src="imgs/icons/social-icon.png" alt='social'/></a>
+                    <a href="/"><img src="imgs/icons/social-icon.png" alt='social'/></a>
                 </div>
                 <div className='fs-11 mt-3'>Текст</div>
             </Container>

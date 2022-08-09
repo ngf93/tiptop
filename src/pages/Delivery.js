@@ -36,7 +36,7 @@ export default function Delivery() {
                 </Container>
                 {
                     (mobile === false || map === true) &&
-                    <img src="imgs/map.png"/>
+                    <img src="imgs/map.png" alt="map"/>
                 }
                 {
                     (mobile === false || map === false) &&

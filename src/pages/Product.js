@@ -39,16 +39,16 @@ export default function Product() {
                                 onSwiper={() => setThumbsSwiper()}
                             >
                                 <SwiperSlide>
-                                    <img src="imgs/product/1.png" />
+                                    <img src="imgs/product/1.png" alt="название товара"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="imgs/product/2.png" />
+                                    <img src="imgs/product/2.png" alt="название товара"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="imgs/product/3.png" />
+                                    <img src="imgs/product/3.png" alt="название товара"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="imgs/product/4.png" />
+                                    <img src="imgs/product/4.png" alt="название товара"/>
                                 </SwiperSlide>
                             </Swiper>
                             <Swiper
@@ -59,16 +59,16 @@ export default function Product() {
                                 thumbs={{ swiper: thumbsSwiper }}
                             >
                                 <SwiperSlide>
-                                    <img src="imgs/product/1.png" />
+                                    <img src="imgs/product/1.png" alt="название товара"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="imgs/product/2.png" />
+                                    <img src="imgs/product/2.png" alt="название товара"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="imgs/product/3.png" />
+                                    <img src="imgs/product/3.png" alt="название товара"/>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="imgs/product/4.png" />
+                                    <img src="imgs/product/4.png" alt="название товара"/>
                                 </SwiperSlide>
                             </Swiper>
                         </Col>
@@ -107,7 +107,7 @@ export default function Product() {
                     <h2 className='d-none d-sm-block'>О товаре</h2>
                     
                     <div className='tabs'>
-                        <button type="button" id="tab-btn-1"  className={(tab==='1') && 'active'} onClick={()=>setTab('1')}>Описание</button>
+                        <button type="button" id="tab-btn-1"  className={(tab==='1') ? 'active' : ''} onClick={()=>setTab('1')}>Описание</button>
                         {
                             (tab === '1') &&
                             <div className='content'>
@@ -120,7 +120,7 @@ export default function Product() {
                                 </Row>
                             </div>
                         }
-                        <button type="button" id="tab-btn-2" className={(tab==='2') && 'active'} onClick={()=>setTab('2')}>Харакетиристики</button>
+                        <button type="button" id="tab-btn-2" className={(tab==='2') ? 'active' : ''} onClick={()=>setTab('2')}>Харакетиристики</button>
                         {
                             (tab === '2') &&
                             <div className='content'>
@@ -128,65 +128,65 @@ export default function Product() {
                                     <h4 className='d-none d-md-block fs-20 fw-7 mb-4 mb-md-5'>Характеристики</h4>
                                     <h5>Хар1</h5>
                                     <ul className="specification list-unstyled">
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
                                             <div>Отв1</div>
                                         </li>
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
                                             <div>Отв1</div>
                                         </li>
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
                                             <div>Отв1</div>
                                         </li>
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
-                                            <div>Отв1</div>
-                                        </li>
-                                    </ul>
-                                    <h5>Хар1</h5>
-                                    <ul className="specification list-unstyled">
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
-                                            <div>Отв1</div>
-                                        </li>
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
-                                            <div>Отв1</div>
-                                        </li>
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
-                                            <div>Отв1</div>
-                                        </li>
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
                                             <div>Отв1</div>
                                         </li>
                                     </ul>
                                     <h5>Хар1</h5>
                                     <ul className="specification list-unstyled">
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
                                             <div>Отв1</div>
                                         </li>
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
                                             <div>Отв1</div>
                                         </li>
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
                                             <div>Отв1</div>
                                         </li>
-                                        <li class="line">
-                                            <div class="gray">Пояс1</div>
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                    </ul>
+                                    <h5>Хар1</h5>
+                                    <ul className="specification list-unstyled">
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
+                                            <div>Отв1</div>
+                                        </li>
+                                        <li className="line">
+                                            <div className="gray">Пояс1</div>
                                             <div>Отв1</div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         }
-                        <button type="button" id="tab-btn-3" className={(tab==='3') && 'active'} onClick={()=>setTab('3')}>Отзывы 15</button>
+                        <button type="button" id="tab-btn-3" className={(tab==='3') ? 'active' : ''} onClick={()=>setTab('3')}>Отзывы 15</button>
                         {
                             (tab === '3') &&
                             <div className='content'>

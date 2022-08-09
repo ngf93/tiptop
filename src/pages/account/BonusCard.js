@@ -19,7 +19,7 @@ export default function BonusCard(props) {
                     <div className='bonus-card mb-3'>
                         <div className='fw-9 fs-17 mb-3'>0 Б</div>
                         <p className='fs-12'>На вашем счету пока нет бонусных рублей</p>
-                        <img src="imgs/logo-top.svg" className='logo'/>
+                        <img src="imgs/logo-top.svg" alt="logo" className='logo'/>
                     </div>
                 </Col>
                 <Col>

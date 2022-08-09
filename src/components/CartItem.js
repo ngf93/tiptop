@@ -5,7 +5,7 @@ import { IoAdd, IoRemove } from "react-icons/io5";
 export default function CartItem(props) {
     return (
         <div className='cart-item'>
-            <img src="imgs/img5.png" />
+            <img src="imgs/img5.png" alt='Большое название товара'/>
             <div className='info'>
                 <div className='order-1 flex-1 pe-3'>
                     <div className='fw-6 mb-1 mb-md-2 mb-xl-3'><span className='light-gray'>Код:</span> 25678</div>
